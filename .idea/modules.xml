@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flink-in-action.iml" filepath="$PROJECT_DIR$/flink-in-action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recommand-actions/recommand-actions.iml" filepath="$PROJECT_DIR$/recommand-actions/recommand-actions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-actions/simple-actions.iml" filepath="$PROJECT_DIR$/simple-actions/simple-actions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-actions/web-actions.iml" filepath="$PROJECT_DIR$/web-actions/web-actions.iml" />
+    </modules>
+  </component>
+</project>
