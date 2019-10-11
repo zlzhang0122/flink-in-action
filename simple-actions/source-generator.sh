@@ -23,4 +23,4 @@ source "$(dirname "$0")"/kafka-common.sh
 echo "Generating sources..."
 
 create_kafka_topic 1 1 user_behavior
-java -cp target/flink-in-action-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.flink.utils.producer.SourceGenerator 1000 | $KAFKA_DIR/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic user_behavior
+java -cp target/simple-actions-1.0-SNAPSHOT-jar-with-dependencies.jar com.github.flink.utils.producer.SourceGenerator 1000 | $KAFKA_DIR/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic user_behavior
