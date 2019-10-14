@@ -6,8 +6,7 @@
 #需要在lib目录中增加:flink-sql-connector-kafka_2.11-1.9.0.jar
 #flink-json-1.9.0-sql-jar.jar
 #flink-jdbc_2.11-1.9.0.jar
-#mysql-connector-java-5.1.48.jar
-#flink-json-1.9.0.jar五个文件
+#mysql-connector-java-5.1.48.jar四个文件
 #./bin/flink run -d -p 4 simple-actions-1.0-SNAPSHOT-jar-with-dependencies.jar -w src/main/resources/ -f study.sql
 #for example:
 ./bin/flink run -d -p 4 ~/workspace/github/flink-in-action/simple-actions/target/simple-actions-1.0-SNAPSHOT-jar-with-dependencies.jar -w ~/workspace/github/flink-in-action/simple-actions/src/main/resources/ -f study.sql
