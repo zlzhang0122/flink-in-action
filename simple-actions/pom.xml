@@ -35,18 +35,18 @@
         </dependency>
 
         <!--与flink-sql-kafka有部分冲突-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.flink</groupId>-->
-            <!--<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>-->
-            <!--<version>${flink.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.apache.flink</groupId>-->
-                    <!--<artifactId>flink-connector-kafka-0.9_2.11</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.flink</groupId>
+                    <artifactId>flink-connector-kafka-0.9_2.11</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.flink</groupId>
