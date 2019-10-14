@@ -12,6 +12,8 @@
     <artifactId>real-actions</artifactId>
 
     <properties>
+        <flink.version>1.9.0</flink.version>
+        <scala.binary.version>2.11</scala.binary.version>
         <hbase.version>1.2.12</hbase.version>
         <hadoop.version>2.6.4</hadoop.version>
         <redis.version>3.0.1</redis.version>
@@ -20,6 +22,14 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+
         <dependency>
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase-client</artifactId>
