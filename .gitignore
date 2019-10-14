@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+recommand-actions/src/main/resources/
+simple-actions/target/archive-tmp/
+simple-actions/target/flink-in-action.jar
+simple-actions/target/generated-sources/
+simple-actions/target/generated-test-sources/
+simple-actions/target/original-flink-in-action.jar
+simple-actions/target/simple-actions-1.0-SNAPSHOT-jar-with-dependencies.jar
+simple-actions/target/simple-actions-1.0-SNAPSHOT.jar
+web-actions/src/main/resources/static/
+web-actions/src/main/resources/templates/
