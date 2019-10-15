@@ -11,7 +11,7 @@ public class HbaseTest {
 
     @Test
     public void run() throws Exception{
-        HbaseClient.createTable("u_history", "p");
-        HbaseClient.createTable("p_history", "p");
+//        HbaseClient.createTable("u_history", "p");
+//        HbaseClient.createTable("p_history", "p");
     }
 }
