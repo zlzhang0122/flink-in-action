@@ -11,6 +11,8 @@ import org.apache.flink.api.common.functions.MapFunction;
 import java.sql.ResultSet;
 
 /**
+ * 产品画像任务
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/13 下午8:29
  */

@@ -18,8 +18,9 @@ public class ProductPortraitTask {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment();
 
         Properties properties = PropertiesUtil.getKafkaProperties("product-portrait");
-        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-product-portrait", properties);
+        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
+        consumer.setStartFromEarliest();
 
         DataStream<String> dataStream = env.addSource(consumer);
         dataStream.map(new ProductPortraitMapFunction());

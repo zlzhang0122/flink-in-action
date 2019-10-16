@@ -25,6 +25,8 @@ import java.util.List;
 import java.util.Properties;
 
 /**
+ * 热门商品任务
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/16 下午09:51
  */
@@ -47,10 +49,11 @@ public class TopProductTask {
 				.build();
 
         Properties properties = PropertiesUtil.getKafkaProperties("topProuct");
-        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("con", properties);
+        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("link-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
-        DataStreamSource<String> dataStream = env.addSource(consumer);
+        consumer.setStartFromEarliest();
 
+        DataStreamSource<String> dataStream = env.addSource(consumer);
         DataStream<TopProductEntity> topProduct = dataStream.map(new TopProductMapFunction()).
                 // 抽取时间戳做watermark 以 秒 为单位
                 assignTimestampsAndWatermarks(new AscendingTimestampExtractor<LogEntity>() {
