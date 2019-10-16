@@ -11,6 +11,8 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import java.util.Properties;
 
 /**
+ * 用户兴趣任务
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/15 下午11:18
  */
@@ -19,7 +21,7 @@ public class UserInterestTask {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironment();
 
         Properties properties = PropertiesUtil.getKafkaProperties("interest");
-        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("con", properties);
+        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
 
         DataStream<String> stream = env.addSource(consumer);

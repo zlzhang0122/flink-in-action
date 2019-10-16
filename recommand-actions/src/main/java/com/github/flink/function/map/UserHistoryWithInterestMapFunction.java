@@ -42,7 +42,6 @@ public class UserHistoryWithInterestMapFunction extends RichMapFunction<LogEntit
         // 如果用户没有操作 则为state创建值
         if (actionLastTime == null) {
             actionLastTime = actionThisTime;
-            saveToHBase(logEntity, 1);
         }else{
             times = getTimesByRule(actionLastTime, actionThisTime);
         }
@@ -73,12 +72,8 @@ public class UserHistoryWithInterestMapFunction extends RichMapFunction<LogEntit
     private void saveToHBase(LogEntity log, int times) throws Exception {
         if (log != null){
             for (int i = 0; i < times; i++) {
-
-            HbaseClient.increamColumn("u_interest",String.valueOf(log.getUserId()),"p",String.valueOf(log.getProductId()));
+                HbaseClient.increamColumn("u_interest", String.valueOf(log.getUserId()), "p", String.valueOf(log.getProductId()));
             }
-
         }
-
     }
-
 }
