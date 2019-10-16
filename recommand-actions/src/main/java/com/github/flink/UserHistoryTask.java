@@ -19,7 +19,7 @@ public class UserHistoryTask {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         Properties properties = PropertiesUtil.getKafkaProperties("flink-history");
-        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-con", properties);
+        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
         consumer.setStartFromEarliest();
 
