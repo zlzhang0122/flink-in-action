@@ -1,6 +1,8 @@
 package com.github.flink.util;
 
 /**
+ * 年龄特征
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/13 下午9:22
  */

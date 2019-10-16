@@ -28,11 +28,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProductPortraitTask.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductPortraitTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/ProductPortraitTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="88" />
+            <state relative-caret-position="75">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/LogTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TopProductTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/TopProductTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserHistoryTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInterestTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserInterestTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserPortraitTask.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -79,12 +141,12 @@
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/function/map/UserHistoryWithInterestMapFunction.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserInterestTask.java" />
-        <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/function/map/UserPortraitMapFunction.java" />
-        <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/ProductPortraitTask.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/function/map/ProductPortraitMapFunction.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/TopProductTask.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/ProductPortraitTask.java" />
+        <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java" />
       </list>
     </option>
   </component>
@@ -1213,12 +1275,12 @@
       <updated>1570436445608</updated>
       <workItem from="1570436449604" duration="4552000" />
       <workItem from="1570765089974" duration="16145000" />
-      <workItem from="1571218023084" duration="13110000" />
+      <workItem from="1571218023084" duration="13232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33807000" />
+    <option name="totallyTimeSpent" value="33929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1280" height="709" extended-state="0" />
@@ -1235,7 +1297,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3069467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1558,30 +1620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/LogTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserInterestTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/dao/ProductDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1612,14 +1650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1667,27 +1697,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/LogTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/TopProductTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="660">
           <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserInterestTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="229">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/ProductPortraitTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="88" />
+        <state relative-caret-position="75">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
