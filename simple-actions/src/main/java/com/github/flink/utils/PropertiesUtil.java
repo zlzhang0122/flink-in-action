@@ -7,6 +7,7 @@ import java.util.Properties;
 
 /**
  * 获取配置信息
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/12 18:45
  */
@@ -43,12 +44,10 @@ public class PropertiesUtil {
 
 	//获取0.8版本kafka配置信息
 	public static Properties getKafka08Properties(String bootstrapServers, String zookeeperAddr, String groupId){
-		Properties properties = new Properties();
+		Properties properties = getKafkaProperties(groupId);
 
-		properties.setProperty("bootstrap.servers", getStrValue("kafka.bootstrap.servers"));
 		// only required for Kafka 0.8
 		properties.setProperty("zookeeper.connect", getStrValue("kafka.zookeeper.connect"));
-		properties.setProperty("group.id", groupId);
 
 		return properties;
 	}
