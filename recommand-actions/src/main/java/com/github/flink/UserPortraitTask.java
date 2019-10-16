@@ -1,6 +1,5 @@
 package com.github.flink;
 
-import com.github.flink.function.map.ProductPortraitMapFunction;
 import com.github.flink.function.map.UserPortraitMapFunction;
 import com.github.flink.utils.FlinkKafkaManager;
 import com.github.flink.utils.PropertiesUtil;
