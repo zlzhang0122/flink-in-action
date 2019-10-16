@@ -23,6 +23,7 @@ public class UserInterestTask {
         Properties properties = PropertiesUtil.getKafkaProperties("interest");
         FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
+        consumer.setStartFromEarliest();
 
         DataStream<String> stream = env.addSource(consumer);
         stream.map(new GetLogFunction()).keyBy("userId").map(new UserHistoryWithInterestMapFunction());
