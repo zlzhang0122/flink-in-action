@@ -20,7 +20,13 @@ public class LogToEntity {
 
         log.setUserId(Integer.parseInt(values[0]));
         log.setProductId(Integer.parseInt(values[1]));
-        log.setTime(Long.parseLong(values[2]));
+
+        if(values[2] == null){
+            log.setTime(null);
+        }else{
+            log.setTime(Long.parseLong(values[2]));
+        }
+
         log.setAction(values[3]);
 
         return log;

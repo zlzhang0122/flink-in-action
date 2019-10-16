@@ -1,5 +1,8 @@
 package com.github.flink.utils;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -11,6 +14,7 @@ import java.util.Properties;
  * @Date: 2019/9/12 18:45
  */
 public class PropertiesUtil {
+	private static final Logger logger = Logger.getLogger(PropertiesUtil.class);
 
 	private final static String CONF_NAME = "config.properties";
 
@@ -34,21 +38,24 @@ public class PropertiesUtil {
 		return contextProperties.getProperty(key);
 	}
 
-	public static int getIntValue(String key) {
+	public static int getIntValue(String key) throws Exception {
 		String strValue = getStrValue(key);
 
 		//todo check
-		return Integer.parseInt(strValue);
+		if(StringUtils.isNumeric(strValue)){
+			return Integer.parseInt(strValue);
+		}else{
+			logger.error("PropertiesUtil getIntValue error, value is not a int value!");
+			throw new Exception("PropertiesUtil getIntValue error, value is not a int value!");
+		}
 	}
 
 	//获取0.8版本kafka配置信息
 	public static Properties getKafka08Properties(String bootstrapServers, String zookeeperAddr, String groupId){
-		Properties properties = new Properties();
+		Properties properties = getKafkaProperties(groupId);
 
-		properties.setProperty("bootstrap.servers", getStrValue("kafka.bootstrap.servers"));
 		// only required for Kafka 0.8
 		properties.setProperty("zookeeper.connect", getStrValue("kafka.zookeeper.connect"));
-		properties.setProperty("group.id", groupId);
 
 		return properties;
 	}

@@ -10,6 +10,8 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import java.util.Properties;
 
 /**
+ * 日志任务
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/12 18:20
  */
