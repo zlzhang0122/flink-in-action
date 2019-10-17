@@ -34,21 +34,23 @@ public class HbaseClient {
 
     public static void createTable(String tableName, String... columnFamilies) throws IOException {
         TableName tablename = TableName.valueOf(tableName);
+
         if(admin.tableExists(tablename)){
             System.out.println("Table Exists");
         }else{
-        System.out.println("Start create table");
-        HTableDescriptor tableDescriptor = new HTableDescriptor(tablename);
-        for (String columnFamliy : columnFamilies) {
-            HTableDescriptor column = tableDescriptor.addFamily(new HColumnDescriptor(columnFamliy));
-        }
-        admin.createTable(tableDescriptor);
-        System.out.println("Create Table success");
+            System.out.println("Start create table");
+            HTableDescriptor tableDescriptor = new HTableDescriptor(tablename);
+            for (String columnFamliy : columnFamilies) {
+                HTableDescriptor column = tableDescriptor.addFamily(new HColumnDescriptor(columnFamliy));
+            }
+            admin.createTable(tableDescriptor);
+            System.out.println("Create Table success");
         }
     }
 
     /**
      * 获取一列获取一行数据
+     *
      * @param tableName
      * @param rowKey
      * @param famliyName
@@ -60,17 +62,20 @@ public class HbaseClient {
         Table table = conn.getTable(TableName.valueOf(tableName));
         byte[] row = Bytes.toBytes(rowKey);
         Get get = new Get(row);
+
         Result result = table.get(get);
         byte[] resultValue = result.getValue(famliyName.getBytes(), column.getBytes());
         if (null == resultValue){
             return null;
         }
+
         return new String(resultValue);
     }
 
 
     /**
      * 获取一行的所有数据 并且排序
+     *
      * @param tableName 表名
      * @param rowKey 列名
      * @throws IOException
@@ -84,8 +89,9 @@ public class HbaseClient {
         HashMap<String, Double> rst = new HashMap<>();
 
         for (Cell cell : r.listCells()){
-            String key = Bytes.toString(cell.getQualifierArray(),cell.getQualifierOffset(),cell.getQualifierLength());
-            String value = Bytes.toString(cell.getValueArray(),cell.getValueOffset(),cell.getValueLength());
+            String key = Bytes.toString(cell.getQualifierArray(), cell.getQualifierOffset(), cell.getQualifierLength());
+            String value = Bytes.toString(cell.getValueArray(), cell.getValueOffset(), cell.getValueLength());
+
             rst.put(key, new Double(value));
         }
 
@@ -99,6 +105,7 @@ public class HbaseClient {
 
     /**
      * 向对应列添加数据
+     *
      * @param tablename 表名
      * @param rowkey 行号
      * @param famliyname 列族名
@@ -108,6 +115,7 @@ public class HbaseClient {
      */
     public static void putData(String tablename, String rowkey, String famliyname,String column,String data) throws Exception {
         Table table = conn.getTable(TableName.valueOf(tablename));
+
         Put put = new Put(rowkey.getBytes());
         put.addColumn(famliyname.getBytes(), column.getBytes(), data.getBytes());
         table.put(put);
@@ -129,6 +137,7 @@ public class HbaseClient {
         if (val != null) {
             res = Integer.valueOf(val) + 1;
         }
+
         putData(tablename, rowkey, famliyname, column, String.valueOf(res));
     }
 
@@ -145,6 +154,7 @@ public class HbaseClient {
 	 */
 	public static List<String> getAllKey(String tableName) throws IOException {
 		List<String> keys = new ArrayList<>();
+
 		Scan scan = new Scan();
 		Table table = HbaseClient.conn.getTable(TableName.valueOf(tableName));
 		ResultScanner scanner = table.getScanner(scan);
