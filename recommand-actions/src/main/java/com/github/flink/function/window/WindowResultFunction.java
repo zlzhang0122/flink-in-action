@@ -16,6 +16,6 @@ public class WindowResultFunction implements WindowFunction<Long, TopProductEnti
 		int itemId = key.getField(0);
 		Long count = aggregateResult.iterator().next();
 
-        collector.collect(TopProductEntity.of(itemId,window.getEnd(),count));
+        collector.collect(TopProductEntity.of(itemId, window.getEnd(), count));
     }
 }

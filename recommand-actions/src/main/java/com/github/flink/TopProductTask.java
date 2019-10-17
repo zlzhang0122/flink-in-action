@@ -49,7 +49,7 @@ public class TopProductTask {
 				.build();
 
         Properties properties = PropertiesUtil.getKafkaProperties("topProuct");
-        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("link-recommand-log", properties);
+        FlinkKafkaManager<String> manager = new FlinkKafkaManager<>("flink-recommand-log", properties);
         FlinkKafkaConsumer<String> consumer = manager.buildString();
         consumer.setStartFromEarliest();
 
@@ -83,7 +83,7 @@ public class TopProductTask {
                     }
                 });
 
-        topProduct.addSink(new RedisSink<>(conf,new TopNRedisSink()));
+        topProduct.addSink(new RedisSink<>(conf, new TopNRedisSink()));
 
         env.execute("top n");
     }
