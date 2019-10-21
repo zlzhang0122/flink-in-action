@@ -9,6 +9,7 @@
             #{item}
         </foreach>
     </select>
+
     <select id="selectById" resultType="com.github.flink.domain.ContactEntity">
         select * from contact
         WHERE id = #{id}
