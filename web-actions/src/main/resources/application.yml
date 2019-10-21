@@ -9,3 +9,4 @@ spring:
       test-on-borrow: true
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/recommand?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+
