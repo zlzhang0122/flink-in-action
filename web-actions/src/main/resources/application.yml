@@ -20,9 +20,6 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 500
-
-
-
 server:
-  address: 8082
+  port: 8080
 

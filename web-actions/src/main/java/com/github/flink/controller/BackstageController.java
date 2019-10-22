@@ -42,8 +42,8 @@ public class BackstageController {
     @ResponseBody
     @GetMapping("/meter")
     public Result getMeter(){
-        String meter = redisClient.getMeter();
-//        String meter = "69";
+//        String meter = redisClient.getMeter();
+        String meter = "69";
 
         return ResultUtil.success(meter);
     }
