@@ -10,14 +10,17 @@
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/ProductPortraitTask.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/parser/SqlCommandParser.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/map/UserHistoryMapFunction.java
-/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/UserPortraitMapFunction.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/map/LogMapFunction.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/domain/LogEntity.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/agg/CountAgg.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/consts/Constants.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/domain/Action.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/window/WindowResultFunction.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/scheduler/ProductCoeff.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/scheduler/SchedulerJob.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/PropertiesUtil.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/map/UserPortraitMapFunction.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/client/HbaseClient.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/UserPortraitTask.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/producer/SourceGenerator.java
@@ -26,5 +29,7 @@
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/LogTask.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/UserInterestTask.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/FlinkKafkaManager.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/scheduler/ItemCfCoeff.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/function/map/UserHistoryWithInterestMapFunction.java
+/Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/domain/ProductPortraitEntity.java
 /Users/zhangjiao/workspace/github/flink-in-action/recommand-actions/src/main/java/com/github/flink/utils/ConsumerDeserializationSchema.java
