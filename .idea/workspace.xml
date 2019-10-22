@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" />
     </list>
     <ignored path="flink-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecommandServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecommandServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="304">
               <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -120,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserScoreServiceImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserScoreServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+            <state relative-caret-position="349">
+              <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1031#1032#0" expanded="true" />
@@ -1597,12 +1595,12 @@
       <updated>1570436445608</updated>
       <workItem from="1570436449604" duration="4552000" />
       <workItem from="1570765089974" duration="16145000" />
-      <workItem from="1571218023084" duration="36559000" />
+      <workItem from="1571218023084" duration="36673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57256000" />
+    <option name="totallyTimeSpent" value="57370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1280" height="709" extended-state="0" />
@@ -2153,26 +2151,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="56" column="58" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+        <state relative-caret-position="349">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1031#1032#0" expanded="true" />
             <element signature="e#1058#1059#0" expanded="true" />
             <element signature="e#1279#1280#0" expanded="true" />
             <element signature="e#1306#1307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
