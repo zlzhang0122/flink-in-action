@@ -47,6 +47,14 @@ public class UserScoreServiceImpl implements UserScoreService {
         return null;
     }
 
+    private Double[] calcCountry(String userId) throws Exception {
+        int china = getValue(userId, "china");
+        int japan = getValue(userId, "japan");
+        int korea = getValue(userId, "korea");
+
+        return getPercent(china, japan, korea);
+    }
+
     private Double[] calColor(String userId) throws Exception {
         int red = getValue(userId, "red");
         int green = getValue(userId, "green");
