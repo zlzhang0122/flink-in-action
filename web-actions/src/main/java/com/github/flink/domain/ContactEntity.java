@@ -1,6 +1,8 @@
 package com.github.flink.domain;
 
 /**
+ * 产品详情表
+ *
  * @Author: zlzhang0122
  * @Date: 2019/10/21 7:34 PM
  */
