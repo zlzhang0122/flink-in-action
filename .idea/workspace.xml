@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ContactServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ContactServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" afterPath="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/contact.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/database.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/hbase建表语句" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/hbase表.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/kafka模拟数据" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-actions/src/main/resources/example/mysql表.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flink-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,24 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserScoreServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserScoreServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="105">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserScoreService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/UserScoreService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +77,30 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+            <state relative-caret-position="-290">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/example/contact.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="3553" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackstageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/controller/BackstageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,16 +151,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RdbmsAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/rdbms/RdbmsAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -169,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/util/LogToEntity.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/LogTask.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/function/map/UserHistoryWithInterestMapFunction.java" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java" />
@@ -220,6 +222,7 @@
         <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/RecommandServiceImpl.java" />
         <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/web-actions/src/main/resources/example/contact.sql" />
       </list>
     </option>
   </component>
@@ -439,6 +442,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="icon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flink-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flink-in-action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1165,11 +1198,11 @@
       <recent name="com.github.flink.utils.client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-actions/src/main/resources/example" />
       <recent name="$PROJECT_DIR$/web-actions/src/main/resources" />
       <recent name="$PROJECT_DIR$/recommand-actions/src/main/resources" />
       <recent name="$PROJECT_DIR$/simple-actions/src/main/resources" />
       <recent name="$PROJECT_DIR$/simple-actions" />
-      <recent name="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebActionsApplication">
@@ -1795,12 +1828,12 @@
       <updated>1570436445608</updated>
       <workItem from="1570436449604" duration="4552000" />
       <workItem from="1570765089974" duration="16145000" />
-      <workItem from="1571218023084" duration="43197000" />
+      <workItem from="1571218023084" duration="44316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63894000" />
+    <option name="totallyTimeSpent" value="65013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="23" width="1280" height="709" extended-state="0" />
@@ -1829,7 +1862,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1842,7 +1875,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1851,25 +1884,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/function/top/TopNHotItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="e#721#722#0" expanded="false" />
-            <element signature="e#759#760#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/TopProductTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/icon/收藏.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2061,14 +2075,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/controller/BackstageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2161,7 +2167,7 @@
         <state relative-caret-position="240">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2272,16 +2278,8 @@
         <state relative-caret-position="300">
           <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2348,8 +2346,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/UserScoreServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="105">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.10.RELEASE/spring-web-5.1.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/controller/BackstageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-290">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-actions/src/main/resources/example/contact.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="3553" selection-end-column="27" />
           <folding />
         </state>
       </provider>
