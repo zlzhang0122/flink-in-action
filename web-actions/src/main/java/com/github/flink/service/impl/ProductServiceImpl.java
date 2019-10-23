@@ -12,7 +12,7 @@ import java.util.List;
  * @Author: zlzhang0122
  * @Date: 2019/10/22 9:41 PM
  */
-@Service("productService")
+@Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired

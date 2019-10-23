@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  * @Author: zlzhang0122
  * @Date: 2019/10/22 7:53 PM
  */
-@Service("recommandService")
+@Service
 public class RecommandServiceImpl implements RecommandService {
     private final Logger logger = LoggerFactory.getLogger(RecommandService.class);
 

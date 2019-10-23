@@ -18,7 +18,7 @@ import java.util.List;
  * @Author: zlzhang0122
  * @Date: 2019/10/22 9:59 PM
  */
-@Service("userScoreService")
+@Service
 public class UserScoreServiceImpl implements UserScoreService {
 
     private RedisClient redisClient = new RedisClient();
