@@ -1,15 +1,20 @@
 # flink-in-action
 实用的flink使用的范例：
 
-1.simple-actions下是一些简单的使用范例,包括:
-(1).batch目录下是一个简单的flink批处理应用--batch wordcount
 
-(2).streaming目录下是一个简单的flink流式计算应用--straming wordcount
+### simple-actions下是一些简单的使用范例,包括:
+(1) batch目录下是一个简单的flink批处理应用--batch wordcount
 
-(3).streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果
+(2) dataproduct目录下是一个模拟生成kafka消息的工具
+
+(3) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用
+
+(4) streaming目录下是一个简单的flink流式计算应用--straming wordcount
+
+(5).streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果
 写入mysql表中
 
-2.recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户(目前仍在完善中)
+### recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户(目前仍在完善中)
 其共分为6个子任务:
 (1)日志任务:用户访问商品日志数据写入kafka,然后flink任务消费kafka的日志topic,不做过滤直接写入hbase中
 (2)浏览历史记录任务:读取用户访问商品日志记录,并将用户访问表的对应用户的商品访问加1,将商品访问表的对应商品的用户的访问加1
@@ -18,7 +23,7 @@
 (5)商品画像任务:读取用户访问商品日志记录,并根据浏览商品的用户的性别及年龄特征,记录产品受这些特征用户的喜好程度,进行产品画像
 (6)热门商品任务:读取用户访问商品日志记录,通过ListState存储热度商品,每5秒输出一次最近60秒的商品热度情况
 
-3. recommand-actions中的scheduler包下:
+recommand-actions中的scheduler包下:
 (1)ItemCfCoeff实现了协同过滤算法策略,计算产品的相关度,主要依据是浏览该产品的用户的相似度
 (2)ProductCoeff实现了余弦相似度算法策略, 计算产品相关度
 
