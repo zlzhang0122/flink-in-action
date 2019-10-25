@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.*;
 
 /**
+ * hbase表操作
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/12 18:34
  */
@@ -118,11 +120,13 @@ public class HbaseClient {
 
         Put put = new Put(rowkey.getBytes());
         put.addColumn(famliyname.getBytes(), column.getBytes(), data.getBytes());
+
         table.put(put);
     }
 
     /**
      * 将该单元格加1
+     *
      * @param tablename 表名
      * @param rowkey 行号
      * @param famliyname 列族名
@@ -149,6 +153,7 @@ public class HbaseClient {
 
 	/**
 	 * 取出表中所有的key
+     *
 	 * @param tableName
 	 * @return
 	 */
@@ -163,5 +168,4 @@ public class HbaseClient {
 		}
 		return keys;
 	}
-
 }
