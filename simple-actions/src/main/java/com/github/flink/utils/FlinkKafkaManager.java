@@ -2,10 +2,13 @@ package com.github.flink.utils;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 
 import java.util.Properties;
 
 /**
+ * 生成kafka的消费者
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/4 17:40
  */
@@ -30,7 +33,7 @@ public class FlinkKafkaManager<T> {
         this.properties.setProperty("auto.commit.interval.ms", "5000");
     }
 
-    public FlinkKafkaConsumer<T> build(Class<T> clazz) {
+    public FlinkKafkaConsumer<T> buildConsumer(Class<T> clazz) {
         if (checkProperties()) {
             return new FlinkKafkaConsumer<T>(topic, new ConsumerDeserializationSchema(clazz), properties);
         } else {
@@ -38,9 +41,17 @@ public class FlinkKafkaManager<T> {
         }
     }
 
-    public FlinkKafkaConsumer<String> buildString() {
+    public FlinkKafkaConsumer<String> buildStringConsumer() {
         if (checkProperties()) {
             return new FlinkKafkaConsumer<String>(topic, new SimpleStringSchema(), properties);
+        } else {
+            return null;
+        }
+    }
+
+    public FlinkKafkaProducer<String> buildStringProducer() {
+        if (checkProperties()) {
+            return new FlinkKafkaProducer<String>(topic, new SimpleStringSchema(), properties);
         } else {
             return null;
         }

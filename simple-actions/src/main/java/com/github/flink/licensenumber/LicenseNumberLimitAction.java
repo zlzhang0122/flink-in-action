@@ -69,8 +69,8 @@ public class LicenseNumberLimitAction {
         env.setStateBackend(new FsStateBackend("hdfs:///flink/checkpoints"));
 
         Properties properties = PropertiesUtil.getKafkaProperties("flink-group");
-        FlinkKafkaManager manager = new FlinkKafkaManager("license-number-limit-source", properties);
-        FlinkKafkaConsumer consumer = manager.buildString();
+        FlinkKafkaManager managerForConsumer = new FlinkKafkaManager("license-number-limit-source", properties);
+        FlinkKafkaConsumer consumer = managerForConsumer.buildStringConsumer();
         consumer.setStartFromLatest();
 
         DataStream<String> inStream = env.addSource(consumer);
@@ -188,7 +188,8 @@ public class LicenseNumberLimitAction {
                 });
 
         //写回到kafka目标topic
-        FlinkKafkaProducer producer = new FlinkKafkaProducer("license-number-limit-target", new SimpleStringSchema(), properties);
+        FlinkKafkaManager managerForProducer = new FlinkKafkaManager("license-number-limit-source", properties);
+        FlinkKafkaProducer producer = managerForProducer.buildStringProducer();
         outStream.addSink(producer);
 
         //执行

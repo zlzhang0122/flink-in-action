@@ -30,7 +30,7 @@ public class RdbmsAction {
         Properties properties = PropertiesUtil.getKafkaProperties("flink-group");
         FlinkKafkaManager manager = new FlinkKafkaManager("user_behavior", properties);
         //用JsonObject 反序列化接收kafka
-        FlinkKafkaConsumer<JSONObject> consumer = manager.build(JSONObject.class);
+        FlinkKafkaConsumer<JSONObject> consumer = manager.buildConsumer(JSONObject.class);
         //从最新的消息开始接收
         consumer.setStartFromLatest();
         //设置watermark和time
