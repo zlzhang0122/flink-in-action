@@ -31,8 +31,10 @@ public class LicenseNumberLimitAction {
     public static void main(String args[]) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
+        //事件时间
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
 
+        //cp配置
         env.enableCheckpointing(10000);
         env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
         env.getCheckpointConfig().setMinPauseBetweenCheckpoints(5000);
