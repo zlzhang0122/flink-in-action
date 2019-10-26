@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 
 /**
- * 违反车牌限号汇总系统
+ * 违反车牌限号汇总系统(示例)
  *
  * @Author: zlzhang0122
  * @Date: 2019/10/26 2:56 PM
