@@ -3,7 +3,6 @@ package com.github.flink.licensenumber;
 import com.github.flink.utils.FlinkKafkaManager;
 import com.github.flink.utils.PropertiesUtil;
 import com.github.flink.utils.TimeUtil;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import org.apache.commons.collections.map.HashedMap;

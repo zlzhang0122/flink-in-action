@@ -2,17 +2,18 @@
 实用的flink使用的范例：
 
 ### simple-actions下是一些简单的使用范例,包括:
-(1) batch目录下是一个简单的flink批处理应用--batch wordcount
+(1) batch目录下是一个简单的flink批处理应用--batch wordcount.
 
-(2) dataproduct目录下是一个模拟生成kafka消息的工具
+(2) dataproduct目录下是一个模拟生成kafka消息的工具.
 
-(3) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用
+(3) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
 
-(4) streaming目录下是一个简单的flink流式计算应用--straming wordcount
+(4) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
 
 (5).streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果
-写入mysql表中
+写入mysql表中.
 
+(6)licenseNumber目录下是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
 
 
 ### recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户(目前仍在完善中)
