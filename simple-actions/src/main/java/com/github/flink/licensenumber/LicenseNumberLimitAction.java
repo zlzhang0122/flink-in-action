@@ -20,6 +20,8 @@ import org.apache.flink.util.Collector;
 import java.util.Properties;
 
 /**
+ * 违反车牌限号汇总系统
+ *
  * @Author: zlzhang0122
  * @Date: 2019/10/26 2:56 PM
  */
@@ -67,6 +69,13 @@ public class LicenseNumberLimitAction {
         });
     }
 
+    /**
+     * 解析数据,如果违反限号时间则返回记录,否则返回null
+     *
+     * @param inStr
+     * @return
+     * @throws Exception
+     */
     private static Tuple4<String, String, String, String> getInput(String inStr) throws Exception{
         JSONParser jsonParser = new JSONParser(JSONParser.DEFAULT_PERMISSIVE_MODE);
         JSONObject jsonObject = (JSONObject) jsonParser.parse(inStr);
@@ -80,7 +89,6 @@ public class LicenseNumberLimitAction {
         //车牌号
         String licenseNum = jsonObject.get("license_num").toString();
 
-        Boolean flag = false;
         try{
             if(TimeUtil.isLicenseNumberLimitTime(TimeUtil.getTimeMillis(passTime), TIME_RULE)){
                 return new Tuple4<>(pointId, passTime, licenseType, licenseNum);
