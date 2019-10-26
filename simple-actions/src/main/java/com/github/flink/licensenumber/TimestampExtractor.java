@@ -7,6 +7,8 @@ import org.apache.flink.streaming.api.watermark.Watermark;
 import javax.annotation.Nullable;
 
 /**
+ * 时间和水位线生成类
+ *
  * @Author: zlzhang0122
  * @Date: 2019/10/26 11:16 PM
  */

@@ -188,8 +188,11 @@ public class LicenseNumberLimitAction {
                     }
                 });
 
+        //写回到kafka目标topic
         FlinkKafkaProducer producer = new FlinkKafkaProducer("license-number-limit-target", new SimpleStringSchema(), properties);
         outStream.addSink(producer);
+
+        //执行
         env.execute("LicenceNumberLimit");
     }
 
