@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/TimeUtil.java" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/TimeUtil.java" />
     </list>
     <ignored path="flink-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="LicenseNumberLimitAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1346">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="196">
+              <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1637#1645#0" expanded="true" />
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/web-actions/src/main/resources/example/database.sql" />
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/utils/client/HbaseClient.java" />
         <option value="$PROJECT_DIR$/simple-actions/pom.xml" />
-        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/TimeUtil.java" />
+        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java" />
       </list>
     </option>
   </component>
@@ -1047,12 +1047,12 @@
       <workItem from="1570436449604" duration="4552000" />
       <workItem from="1570765089974" duration="16145000" />
       <workItem from="1571218023084" duration="46297000" />
-      <workItem from="1571973317384" duration="11159000" />
+      <workItem from="1571973317384" duration="11621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78153000" />
+    <option name="totallyTimeSpent" value="78615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -1525,8 +1525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/licensenumber/LicenseNumberLimitAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1346">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="196">
+          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1637#1645#0" expanded="true" />

@@ -11,6 +11,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.common.functions.ReduceFunction;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.tuple.Tuple4;
 import org.apache.flink.api.java.tuple.Tuple5;
 import org.apache.flink.api.java.tuple.Tuple6;
@@ -20,11 +22,14 @@ import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 import org.apache.flink.util.Collector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 违反车牌限号汇总系统(示例)
@@ -48,6 +53,8 @@ public class LicenseNumberLimitAction {
     //限行规则
     private static final String LIMIT_RULE = "1:1_6,2:2_7,3:3_8,4:4_9,5:5_0";
 
+    private static final Integer maxLaggedTime = 5;
+
     public static void main(String args[]) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
@@ -63,7 +70,7 @@ public class LicenseNumberLimitAction {
         env.setStateBackend(new FsStateBackend("hdfs:///flink/checkpoints"));
 
         Properties properties = PropertiesUtil.getKafkaProperties("flink-group");
-        FlinkKafkaManager manager = new FlinkKafkaManager("license-number-limit", properties);
+        FlinkKafkaManager manager = new FlinkKafkaManager("license-number-limit-source", properties);
         FlinkKafkaConsumer consumer = manager.buildString();
         consumer.setStartFromLatest();
 
@@ -131,16 +138,59 @@ public class LicenseNumberLimitAction {
                 String licenseNum = value.f4;
 
                 String limitRules = "";
+                try{
+                    String[] limitRulesArray = getLimitRule(passTime);
+                    String limitOne = "", limitTwo = "";
+                    if(limitRulesArray.length >= 2){
+                        limitOne = limitRulesArray[0];
+                        limitTwo = limitRulesArray[1];
+                    }
+                    limitRules = limitOne + "_" + limitTwo;
 
+                    Boolean flag = false;
+                    if(isLimitNumber(licenseNum, passTime)){
+                        flag = true;
+                    }
 
-                return null;
+                    if(flag){
+                        return new Tuple6<String, String, String, String, Long, String>(areaId, licenseType, licenseNum, limitRules.substring(5, 8), passTime, value.f1);
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+                return new Tuple6<String, String, String, String, Long, String>(null, null,null, null, 0L, null);
             }
-        }).map(new MapFunction<Tuple6<String, String, String, String, Long, String>, JSONObject>() {
-            @Override
-            public JSONObject map(Tuple6<String, String, String, String, Long, String> value) throws Exception {
-                return null;
-            }
-        });
+        }).assignTimestampsAndWatermarks(new TimestampExtractor(maxLaggedTime))
+                .keyBy(0)
+                .reduce(new ReduceFunction<Tuple6<String, String, String, String, Long, String>>() {
+                    @Override
+                    public Tuple6<String, String, String, String, Long, String> reduce(Tuple6<String, String, String, String, Long, String> value1, Tuple6<String, String, String, String, Long, String> value2) throws Exception {
+                        return new Tuple6<String, String, String, String, Long, String>(value1.f0, value1.f1, value1.f2, value1.f3, value1.f4, value1.f5);
+                    }
+                })
+                .map(new MapFunction<Tuple6<String, String, String, String, Long, String>, JSONObject>() {
+                    @Override
+                    public JSONObject map(Tuple6<String, String, String, String, Long, String> value) throws Exception {
+                        logger.info("toJson:" + value.f0 + " " + value.f1 + " " + value.f2 + " " + value.f3 + " " + value.f4 + " " + value.f5);
+
+                        JSONObject jsonObject = new JSONObject();
+                        String passTime = TimeUtil.milliSecondToTimestampString(value.f4);
+                        jsonObject.put("area_id", value.f0);
+                        jsonObject.put("license_type", value.f1);
+                        jsonObject.put("license_num", value.f2);
+                        jsonObject.put("limit_rules", value.f3);
+                        jsonObject.put("passing_time", value.f4);
+                        jsonObject.put("point_id", value.f5);
+
+                        logger.info("----" + jsonObject.toString());
+                        return jsonObject;
+                    }
+                });
+
+        FlinkKafkaProducer producer = new FlinkKafkaProducer("license-number-limit-target", new SimpleStringSchema(), properties);
+        outStream.addSink(producer);
+        env.execute("LicenceNumberLimit");
     }
 
     /**
@@ -202,7 +252,7 @@ public class LicenseNumberLimitAction {
      * @param passingTime
      * @return
      */
-    private String[] getLimitRule(Long passingTime) throws Exception{
+    private static String[] getLimitRule(Long passingTime) throws Exception{
         List<String> ret = new ArrayList<>();
 
         String time = TimeUtil.milliSecondToTimestampString(passingTime);
@@ -224,5 +274,44 @@ public class LicenseNumberLimitAction {
         ret.add(ele[1]);
 
         return ret.toArray(new String[0]);
+    }
+
+    /**
+     * 判断号牌是否限行
+     *
+     * @param licenseNumber
+     * @param passingTime
+     * @return
+     * @throws Exception
+     */
+    private static Boolean isLimitNumber(String licenseNumber, Long passingTime) throws Exception{
+        String lastNum = getLastIntNumber(licenseNumber);
+        String[] limitRulesArray = getLimitRule(passingTime);
+
+        String str = "";
+        for(int i = 0; i< limitRulesArray.length; i++){
+            str += limitRulesArray[i];
+        }
+
+        if(str.contains(lastNum)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    /**
+     * 获取车牌最后一位数字
+     *
+     * @param licenseNumber
+     * @return
+     */
+    private static String getLastIntNumber(String licenseNumber){
+        String regEx = "[^0-9]";
+        Pattern pattern = Pattern.compile(regEx);
+        Matcher matcher = pattern.matcher(licenseNumber);
+        String result = matcher.replaceAll("").trim();
+
+        return result.substring(result.length() - 1);
     }
 }
