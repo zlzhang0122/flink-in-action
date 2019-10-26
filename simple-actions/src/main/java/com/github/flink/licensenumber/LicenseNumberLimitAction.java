@@ -3,12 +3,17 @@ package com.github.flink.licensenumber;
 import com.github.flink.utils.FlinkKafkaManager;
 import com.github.flink.utils.PropertiesUtil;
 import com.github.flink.utils.TimeUtil;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
+import org.apache.commons.collections.map.HashedMap;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.java.tuple.Tuple4;
+import org.apache.flink.api.java.tuple.Tuple5;
+import org.apache.flink.api.java.tuple.Tuple6;
 import org.apache.flink.runtime.state.filesystem.FsStateBackend;
 import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.TimeCharacteristic;
@@ -16,8 +21,10 @@ import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.apache.flink.util.Collector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.Properties;
+import java.util.*;
 
 /**
  * 违反车牌限号汇总系统
@@ -26,7 +33,20 @@ import java.util.Properties;
  * @Date: 2019/10/26 2:56 PM
  */
 public class LicenseNumberLimitAction {
+    private static final Logger logger = LoggerFactory.getLogger(LicenseNumberLimitAction.class);
+
     private static final String TIME_RULE = "07:00-09:00,16:30-18:30";
+
+    //1海淀,2朝阳,3东城,4西城,5昌平
+    private static final List<String> TEST_AREA = new ArrayList<String>(Arrays.asList("1_1","2_2","3_2", "4_1", "5_3",
+        "6_4", "7_3", "8_3", "9_5", "10_2"));
+
+    //重点区域监控
+    private static final String KEY_AREA_1 = "{\"areaName\":\"海淀区\",\"pointId\":\"1\",\"inOut\":\"9\",\"area_id\":\"1\"}";
+    private static final String KEY_AREA_2 = "{\"areaName\":\"朝阳区\",\"pointId\":\"2\",\"inOut\":\"10\",\"area_id\":\"2\"}";
+
+    //限行规则
+    private static final String LIMIT_RULE = "1:1_6,2:2_7,3:3_8,4:4_9,5:5_0";
 
     public static void main(String args[]) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -63,10 +83,62 @@ public class LicenseNumberLimitAction {
                     return true;
                 }
             }
-        }).flatMap(new FlatMapFunction<Tuple4<String, String, String, String>, JSONObject>() {
+        }).flatMap(new FlatMapFunction<Tuple4<String, String, String, String>, Tuple5<String, String, String, String, String>>() {
             @Override
-            public void flatMap(Tuple4<String, String, String, String> value, Collector<JSONObject> out) throws Exception {
+            public void flatMap(Tuple4<String, String, String, String> value, Collector<Tuple5<String, String, String, String, String>> out) throws Exception {
+                logger.info("flatmap:" + value.f0 + " " + value.f1 + " " + value.f2 + " " + value.f3);
 
+                String[] areas = getAreaId(TEST_AREA.iterator(), value.f0);
+                String pointId = value.f0;
+                for(String s : areas){
+                    JSONParser jsonParser = new JSONParser(JSONParser.DEFAULT_PERMISSIVE_MODE);
+
+                    JSONObject jsonObject = null;
+                    if("1".equals(s)){
+                        jsonObject = (JSONObject) jsonParser.parse(KEY_AREA_1);
+                    }else if("2".equals(s)){
+                        jsonObject = (JSONObject) jsonParser.parse(KEY_AREA_2);
+                    }
+
+                    if(null == jsonObject){
+                        out.collect(new Tuple5<>(null, null, null, null, null));
+                    }else{
+                        String areaId = jsonObject.get("area_id").toString();
+
+                        out.collect(new Tuple5<>(areaId, pointId, value.f1, value.f2, value.f3));
+                    }
+                }
+            }
+        }).filter(new FilterFunction<Tuple5<String, String, String, String, String>>() {
+            @Override
+            public boolean filter(Tuple5<String, String, String, String, String> value) throws Exception {
+                if(value.f0 == null && value.f1 == null && value.f2 == null && value.f3 == null && value.f4 == null){
+                    return false;
+                }else {
+                    return true;
+                }
+            }
+        }).map(new MapFunction<Tuple5<String, String, String, String, String>, Tuple6<String, String, String, String, Long, String>>() {
+            @Override
+            public Tuple6<String, String, String, String, Long, String> map(Tuple5<String, String, String, String, String> value) throws Exception {
+                long passTime = TimeUtil.getTimeMillis(value.f2);
+                if(passTime - System.currentTimeMillis() > 0){
+                    passTime = System.currentTimeMillis();
+                }
+
+                String areaId = value.f0;
+                String licenseType = value.f3;
+                String licenseNum = value.f4;
+
+                String limitRules = "";
+
+
+                return null;
+            }
+        }).map(new MapFunction<Tuple6<String, String, String, String, Long, String>, JSONObject>() {
+            @Override
+            public JSONObject map(Tuple6<String, String, String, String, Long, String> value) throws Exception {
+                return null;
             }
         });
     }
@@ -100,5 +172,57 @@ public class LicenseNumberLimitAction {
         }
 
         return new Tuple4<>(null, null, null, null);
+    }
+
+    /**
+     * 根据pointId获取区域id
+     *
+     * @param pointAndArea
+     * @param pointId
+     * @return
+     */
+    private static String[] getAreaId(Iterator<String> pointAndArea, String pointId){
+        List<String> list = new ArrayList<>();
+        while(pointAndArea.hasNext()){
+            String item = pointAndArea.next();
+            while(StringUtils.isNoneBlank(item)){
+                String[] arr = item.split("_");
+                if(arr[0].equals(pointId)){
+                    list.add(arr[1]);
+                }
+            }
+        }
+
+        return list.toArray(new String[0]);
+    }
+
+    /**
+     * 获取当日限行规则
+     *
+     * @param passingTime
+     * @return
+     */
+    private String[] getLimitRule(Long passingTime) throws Exception{
+        List<String> ret = new ArrayList<>();
+
+        String time = TimeUtil.milliSecondToTimestampString(passingTime);
+        int flag = TimeUtil.dayOfWeek(time);
+
+        String limitRule = LIMIT_RULE;
+        Map<String, String> map = new HashedMap();
+        String[] limitRules = limitRule.split(",");
+        for(int i = 0; i < limitRules.length; i++){
+            String item = limitRules[i];
+
+            String[] rules = item.split(":");
+            map.put(rules[0], rules[1]);
+        }
+
+        String rule = map.get(flag);
+        String[] ele = rule.split("_");
+        ret.add(ele[0]);
+        ret.add(ele[1]);
+
+        return ret.toArray(new String[0]);
     }
 }

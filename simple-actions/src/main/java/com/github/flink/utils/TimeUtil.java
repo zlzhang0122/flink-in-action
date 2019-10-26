@@ -3,6 +3,7 @@ package com.github.flink.utils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -44,6 +45,7 @@ public class TimeUtil {
             }
         }
 
+        //两种情况,一种是有两个限制时间段,另一种是只有一个限制时间段
         if(!"".equals(range1) && !"".equals(range2)){
             String today = dateFormat.format(new Date());
 
@@ -88,5 +90,36 @@ public class TimeUtil {
     public static long getTimeMillis(String dateString) throws Exception {
         Date date = dateTimeFormat.parse(dateString);
         return date.getTime();
+    }
+
+    /**
+     * 获取时间的字符串表示
+     *
+     * @param milliSecond
+     * @return
+     */
+    public static String milliSecondToTimestampString(Long milliSecond){
+        return dateTimeFormat.format(new Date(milliSecond));
+    }
+
+    /**
+     * 获取该时间是周几
+     *
+     * @param dateStr
+     * @return
+     * @throws Exception
+     */
+    public static int dayOfWeek(String dateStr) throws Exception{
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = simpleDateFormat.parse(dateStr);
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        int week = calendar.get(Calendar.DAY_OF_WEEK) - 1;
+
+        if(week <= 0){
+            week = 7;
+        }
+
+        return week;
     }
 }
