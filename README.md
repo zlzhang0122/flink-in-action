@@ -42,16 +42,10 @@ recommand-actions中的scheduler包下:
 
 另外，还有一些工具方法，包括simple-actions目录下：
 
-source-generator.sh用来生成kafka topic的消息
+source-generator.sh用来生成kafka topic的消息.
 
-env.sh下是flink和kafka的安装目录，需要根据具体目录调整
+run-command.sh是一个启动simple-actions下flink任务的脚本.
 
-示例1-3的建表语句如下：
+kafka-common.sh是一个模拟自动生成消息并发往kafka的脚本.
 
-CREATE TABLE `pvuv_sink` (
-  `dt` varchar(128) NOT NULL DEFAULT '0',
-  `pv` bigint(64) DEFAULT NULL,
-  `uv` bigint(64) DEFAULT NULL,
-  PRIMARY KEY (`dt`),
-  UNIQUE KEY `dt_UNIQUE` (`dt`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+env.sh下是flink和kafka的安装目录，需要根据具体目录调整.
