@@ -1,6 +1,6 @@
-package com.github.flink.licensenumber;
+package com.github.flink.actionanalysis.functions;
 
-import org.apache.flink.api.java.tuple.Tuple6;
+import com.github.flink.actionanalysis.model.UserBehavior;
 import org.apache.flink.streaming.api.functions.AssignerWithPunctuatedWatermarks;
 import org.apache.flink.streaming.api.watermark.Watermark;
 
@@ -12,11 +12,11 @@ import javax.annotation.Nullable;
  * @Author: zlzhang0122
  * @Date: 2019/10/26 11:16 PM
  */
-public class TimestampExtractor implements AssignerWithPunctuatedWatermarks<Tuple6<String, String, String, String, Long, String>> {
+public class TimestampExtractor implements AssignerWithPunctuatedWatermarks<UserBehavior> {
 
     private Long currentMaxTimestamp = 0L;
 
-    private Integer maxLaggedTime;
+    private Integer maxLaggedTime = 10;
 
     public TimestampExtractor(Integer maxLaggedTime) {
         this.maxLaggedTime = maxLaggedTime;
@@ -31,7 +31,7 @@ public class TimestampExtractor implements AssignerWithPunctuatedWatermarks<Tupl
      */
     @Nullable
     @Override
-    public Watermark checkAndGetNextWatermark(Tuple6<String, String, String, String, Long, String> lastElement, long extractedTimestamp) {
+    public Watermark checkAndGetNextWatermark(UserBehavior lastElement, long extractedTimestamp) {
         return new Watermark(currentMaxTimestamp - maxLaggedTime * 1000);
     }
 
@@ -43,8 +43,8 @@ public class TimestampExtractor implements AssignerWithPunctuatedWatermarks<Tupl
      * @return
      */
     @Override
-    public long extractTimestamp(Tuple6<String, String, String, String, Long, String> element, long previousElementTimestamp) {
-        Long timestamp = element.f4;
+    public long extractTimestamp(UserBehavior element, long previousElementTimestamp) {
+        Long timestamp = element.getTimestamp();
         currentMaxTimestamp = Math.max(timestamp, currentMaxTimestamp);
 
         return timestamp;

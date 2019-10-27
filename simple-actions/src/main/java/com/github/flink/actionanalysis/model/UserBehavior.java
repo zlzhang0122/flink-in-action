@@ -1,4 +1,4 @@
-package com.github.flink.actionanalysis;
+package com.github.flink.actionanalysis.model;
 
 /**
  * 用户行为实体类
