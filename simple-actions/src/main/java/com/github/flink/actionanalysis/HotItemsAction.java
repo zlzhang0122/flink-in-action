@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.flink.actionanalysis.functions.CountAgg;
 import com.github.flink.actionanalysis.functions.TimestampExtractor;
 import com.github.flink.actionanalysis.functions.WindowResultFunction;
+import com.github.flink.actionanalysis.model.ItemViewCount;
 import com.github.flink.actionanalysis.model.UserBehavior;
 import com.github.flink.utils.FlinkKafkaManager;
 import com.github.flink.utils.PropertiesUtil;
@@ -11,8 +12,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.TimeCharacteristic;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import org.slf4j.Logger;
@@ -45,11 +48,11 @@ public class HotItemsAction {
         consumer.setStartFromLatest();
 
         DataStreamSource<JSONObject> inStream = env.addSource(consumer);
-        inStream.map(new MapFunction<JSONObject, UserBehavior>() {
+        DataStream<ItemViewCount> res = inStream.map(new MapFunction<JSONObject, UserBehavior>() {
 
             @Override
             public UserBehavior map(JSONObject value) throws Exception {
-                logger.info("map:" + value.toString());
+                logger.debug("map:" + value.toString());
 
                 UserBehavior userBehavior = new UserBehavior();
 
@@ -83,7 +86,14 @@ public class HotItemsAction {
                         }
                     }
                 }).keyBy("itemId").timeWindow(Time.minutes(60), Time.minutes(5))
-                .aggregate(new CountAgg(), new WindowResultFunction()).print();
+                .aggregate(new CountAgg(), new WindowResultFunction());
+
+        res.addSink(new SinkFunction<ItemViewCount>() {
+            @Override
+            public void invoke(ItemViewCount value) throws Exception {
+                logger.info("sink:" + value.toString());
+            }
+        });
 
         env.execute("Hot items action");
     }

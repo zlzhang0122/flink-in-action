@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$1.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$2.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$3.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$4.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$5.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$6.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$7.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/LicenseNumberLimitAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/TimestampExtractor.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/licensenumber/TimestampExtractor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommand-actions/target/real-actions-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/recommand-actions/target/real-actions-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction$1.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction$2.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/HotItemsAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/functions/WindowResultFunction.class" afterPath="$PROJECT_DIR$/simple-actions/target/classes/com/github/flink/actionanalysis/functions/WindowResultFunction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/config.properties" afterPath="$PROJECT_DIR$/simple-actions/target/classes/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/study.sql" afterPath="$PROJECT_DIR$/simple-actions/target/classes/study.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/classes/user_behavior.log" afterPath="$PROJECT_DIR$/simple-actions/target/classes/user_behavior.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommand-actions/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/recommand-actions/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommand-actions/target/surefire-reports/TEST-com.github.flink.hbase.HbaseTest.xml" afterPath="$PROJECT_DIR$/recommand-actions/target/surefire-reports/TEST-com.github.flink.hbase.HbaseTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recommand-actions/target/surefire-reports/com.github.flink.hbase.HbaseTest.txt" afterPath="$PROJECT_DIR$/recommand-actions/target/surefire-reports/com.github.flink.hbase.HbaseTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/simple-actions/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/surefire-reports/TEST-com.github.flink.random.RandomTest.xml" afterPath="$PROJECT_DIR$/simple-actions/target/surefire-reports/TEST-com.github.flink.random.RandomTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/surefire-reports/TEST-com.github.flink.streamingsql.StreamingSqlActionTest.xml" afterPath="$PROJECT_DIR$/simple-actions/target/surefire-reports/TEST-com.github.flink.streamingsql.StreamingSqlActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/target/surefire-reports/com.github.flink.streamingsql.StreamingSqlActionTest.txt" afterPath="$PROJECT_DIR$/simple-actions/target/surefire-reports/com.github.flink.streamingsql.StreamingSqlActionTest.txt" />
     </list>
     <ignored path="flink-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotItemsAction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HotItemsAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/HotItemsAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
+            <state relative-caret-position="184">
+              <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,81 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kafka-common.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/kafka-common.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="env.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/env.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SourceGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/producer/SourceGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="source-generator.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/source-generator.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run-command.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/run-command.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemViewCount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/model/ItemViewCount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowResultFunction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WindowResultFunction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+              <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,9 +135,9 @@
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/model/UserBehavior.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/CountAgg.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/HotItemsAction.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/model/ItemViewCount.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java" />
+        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/HotItemsAction.java" />
       </list>
     </option>
   </component>
@@ -230,7 +159,62 @@
     </option>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="real-actions" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="real-actions" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="flink-in-action" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="flink-in-action" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -1433,16 +1417,16 @@
       <workItem from="1570436449604" duration="4552000" />
       <workItem from="1570765089974" duration="16145000" />
       <workItem from="1571218023084" duration="46297000" />
-      <workItem from="1571973317384" duration="26580000" />
+      <workItem from="1571973317384" duration="26892000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93574000" />
+    <option name="totallyTimeSpent" value="93886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1455,7 +1439,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3241491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35864297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1834,6 +1818,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/model/ItemViewCount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1842,7 +1836,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/pom.xml">
+    <entry file="file://$PROJECT_DIR$/simple-actions/run-command.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/source-generator.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/producer/SourceGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/env.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1858,52 +1876,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/env.sh">
+    <entry file="file://$PROJECT_DIR$/simple-actions/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/producer/SourceGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/source-generator.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/run-command.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/HotItemsAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/actionanalysis/functions/WindowResultFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+        <state relative-caret-position="184">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

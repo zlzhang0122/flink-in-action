@@ -22,7 +22,7 @@ public class WindowResultFunction implements WindowFunction<Long, ItemViewCount,
         Long itemId = key.f0;
         Long count = input.iterator().next();
 
-        logger.info("apply:" + itemId + " " + window.getEnd() + " " + count);
+        logger.debug("apply:" + itemId + " " + window.getEnd() + " " + count);
 
         out.collect(new ItemViewCount(itemId, window.getEnd(), count));
     }

@@ -25,7 +25,7 @@ import java.io.InputStreamReader;
 
 public class SourceGenerator {
 
-    private static final long SPEED = 1000; // 每秒1000条
+    private static final long SPEED = 10000; // 每秒10000条
 
     public static void main(String[] args) {
         long speed = SPEED;
