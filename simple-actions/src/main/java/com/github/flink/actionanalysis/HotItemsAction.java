@@ -3,6 +3,7 @@ package com.github.flink.actionanalysis;
 import com.alibaba.fastjson.JSONObject;
 import com.github.flink.actionanalysis.functions.CountAgg;
 import com.github.flink.actionanalysis.functions.TimestampExtractor;
+import com.github.flink.actionanalysis.functions.TopNHotItems;
 import com.github.flink.actionanalysis.functions.WindowResultFunction;
 import com.github.flink.actionanalysis.model.ItemViewCount;
 import com.github.flink.actionanalysis.model.UserBehavior;
@@ -48,7 +49,7 @@ public class HotItemsAction {
         consumer.setStartFromLatest();
 
         DataStreamSource<JSONObject> inStream = env.addSource(consumer);
-        DataStream<ItemViewCount> res = inStream.map(new MapFunction<JSONObject, UserBehavior>() {
+        DataStream<String> res = inStream.map(new MapFunction<JSONObject, UserBehavior>() {
 
             @Override
             public UserBehavior map(JSONObject value) throws Exception {
@@ -86,12 +87,14 @@ public class HotItemsAction {
                         }
                     }
                 }).keyBy("itemId").timeWindow(Time.minutes(60), Time.minutes(5))
-                .aggregate(new CountAgg(), new WindowResultFunction());
+                .aggregate(new CountAgg(), new WindowResultFunction())
+                .keyBy("windowEnd").process(new TopNHotItems(3));
 
-        res.addSink(new SinkFunction<ItemViewCount>() {
+        //sink算子,模拟情况只输出到日志
+        res.addSink(new SinkFunction<String>() {
             @Override
-            public void invoke(ItemViewCount value) throws Exception {
-                logger.info("sink:" + value.toString());
+            public void invoke(String value) throws Exception {
+                logger.info("sink:" + value);
             }
         });
 
