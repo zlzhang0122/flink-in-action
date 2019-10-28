@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 网络流量分析,每5秒统计一次10分钟内访问量最高的10个url
+ * 网络流量分析,每5秒统计一次10分钟内访问量最高的10个url,与actionanalysis类似
  *
  * @Author: zlzhang0122
  * @Date: 2019/10/28 7:10 PM
