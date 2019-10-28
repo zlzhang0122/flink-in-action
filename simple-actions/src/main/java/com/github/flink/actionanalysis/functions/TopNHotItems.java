@@ -14,6 +14,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * 计算热门商品TopN
+ *
  * @Author: zlzhang0122
  * @Date: 2019/10/28 6:10 PM
  */
