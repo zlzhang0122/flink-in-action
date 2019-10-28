@@ -28,6 +28,12 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
         this.topSize = topSize;
     }
 
+    /**
+     * 注册state
+     *
+     * @param configuration
+     * @throws Exception
+     */
     @Override
     public void open(Configuration configuration) throws Exception{
         super.open(configuration);
@@ -35,12 +41,28 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
         itemViewCountListState = getIterationRuntimeContext().getListState(descriptor);
     }
 
+    /**
+     * state存储,注册触发器
+     *
+     * @param value
+     * @param ctx
+     * @param out
+     * @throws Exception
+     */
     @Override
     public void processElement(ItemViewCount value, Context ctx, Collector<String> out) throws Exception {
         itemViewCountListState.add(value);
         ctx.timerService().registerEventTimeTimer(value.getWindowEnd() + 1);
     }
 
+    /**
+     * 触发器逻辑
+     *
+     * @param timestamp
+     * @param ctx
+     * @param out
+     * @throws Exception
+     */
     @Override
     public void onTimer(long timestamp, OnTimerContext ctx, Collector<String> out) throws Exception {
         List<ItemViewCount> list = new ArrayList<>();
@@ -73,6 +95,7 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
             res.append(" 浏览量=").append(currItem.getCount()).append("\n");
         }
         res.append("========");
+
         //休息1秒
         Thread.sleep(1000);
         out.collect(res.toString());
