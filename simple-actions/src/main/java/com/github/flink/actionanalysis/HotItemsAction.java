@@ -49,6 +49,8 @@ public class HotItemsAction {
 
             @Override
             public UserBehavior map(JSONObject value) throws Exception {
+                logger.info("map:" + value.toString());
+
                 UserBehavior userBehavior = new UserBehavior();
 
                 if(value != null){
