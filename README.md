@@ -10,7 +10,7 @@
 
 (4) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
 
-(5).streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果
+(5) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果
 写入mysql表中.
 
 (6)licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
