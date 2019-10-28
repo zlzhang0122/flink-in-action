@@ -47,4 +47,13 @@ public class ItemViewCount {
     public void setCount(Long count) {
         this.count = count;
     }
+
+    @Override
+    public String toString() {
+        return "ItemViewCount{" +
+                "itemId=" + itemId +
+                ", windowEnd=" + windowEnd +
+                ", count=" + count +
+                '}';
+    }
 }

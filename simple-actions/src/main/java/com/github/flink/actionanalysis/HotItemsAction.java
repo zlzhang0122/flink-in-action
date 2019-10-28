@@ -81,7 +81,7 @@ public class HotItemsAction {
                         }
                     }
                 }).keyBy("itemId").timeWindow(Time.minutes(60), Time.minutes(5))
-                .aggregate(new CountAgg(), new WindowResultFunction());
+                .aggregate(new CountAgg(), new WindowResultFunction()).print();
 
         env.execute("Hot items action");
     }
