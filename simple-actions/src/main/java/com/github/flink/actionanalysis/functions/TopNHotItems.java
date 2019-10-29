@@ -90,11 +90,11 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
         for(int i = 0; i< list.size(); i++){
             ItemViewCount currItem = list.get(i);
 
-            res.append("NO").append(i+1).append(":");
+            res.append("No").append(i+1).append(":");
             res.append(" 商品ID=").append(currItem.getItemId());
             res.append(" 浏览量=").append(currItem.getCount()).append("\n");
         }
-        res.append("========");
+        res.append("========\n\n");
 
         //休息1秒
         Thread.sleep(1000);

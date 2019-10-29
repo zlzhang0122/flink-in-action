@@ -1,6 +1,7 @@
 package com.github.flink.networkanalysis;
 
 import com.github.flink.networkanalysis.functions.CountAgg;
+import com.github.flink.networkanalysis.functions.TopNHotUrls;
 import com.github.flink.networkanalysis.functions.WindowResultFunction;
 import com.github.flink.networkanalysis.model.ApacheLogEvent;
 import com.github.flink.networkanalysis.model.UrlViewCount;
@@ -55,7 +56,7 @@ public class TrafficAnalysis {
 
         DataStream<String> inDataStream = env.fromCollection(logs);
 
-        DataStream<UrlViewCount> userViewCountDataStream = inDataStream.map(new MapFunction<String, ApacheLogEvent>() {
+        inDataStream.map(new MapFunction<String, ApacheLogEvent>() {
             @Override
             public ApacheLogEvent map(String value) throws Exception {
                 if(StringUtils.isNoneBlank(value)){
@@ -83,6 +84,9 @@ public class TrafficAnalysis {
                 return element.getEventTime();
             }
         }).keyBy("url").timeWindow(Time.minutes(10), Time.seconds(5))
-                .aggregate(new CountAgg(), new WindowResultFunction());
+                .aggregate(new CountAgg(), new WindowResultFunction())
+                .keyBy(1).process(new TopNHotUrls(5)).print();
+
+        env.execute("Traffic Analysis Job");
     }
 }
