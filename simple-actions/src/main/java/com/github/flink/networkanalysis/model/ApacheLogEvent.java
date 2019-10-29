@@ -7,6 +7,18 @@ package com.github.flink.networkanalysis.model;
  * @Date: 2019/10/29 6:06 PM
  */
 public class ApacheLogEvent {
+
+    public ApacheLogEvent() {
+    }
+
+    public ApacheLogEvent(String ip, String userId, Long eventTime, String method, String url) {
+        this.ip = ip;
+        this.userId = userId;
+        this.eventTime = eventTime;
+        this.method = method;
+        this.url = url;
+    }
+
     private String ip;
 
     private String userId;

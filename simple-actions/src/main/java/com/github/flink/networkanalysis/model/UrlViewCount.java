@@ -6,7 +6,18 @@ package com.github.flink.networkanalysis.model;
  * @Author: zlzhang0122
  * @Date: 2019/10/29 6:10 PM
  */
-public class UserViewCount {
+public class UrlViewCount {
+
+    public UrlViewCount(){
+
+    }
+
+    public UrlViewCount(String url, Long windowEnd, Long count) {
+        this.url = url;
+        this.windowEnd = windowEnd;
+        this.count = count;
+    }
+
     private String url;
 
     private Long windowEnd;
