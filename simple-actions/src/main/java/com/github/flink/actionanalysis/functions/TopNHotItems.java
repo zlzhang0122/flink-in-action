@@ -30,7 +30,7 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
 
     /**
      * 注册state
-     *
+     *LoginEvent
      * @param configuration
      * @throws Exception
      */
@@ -38,7 +38,7 @@ public class TopNHotItems extends KeyedProcessFunction<Tuple, ItemViewCount, Str
     public void open(Configuration configuration) throws Exception{
         super.open(configuration);
         ListStateDescriptor<ItemViewCount> descriptor = new ListStateDescriptor<>("itemState-state", ItemViewCount.class);
-        itemViewCountListState = getIterationRuntimeContext().getListState(descriptor);
+        itemViewCountListState = getRuntimeContext().getListState(descriptor);
     }
 
     /**
