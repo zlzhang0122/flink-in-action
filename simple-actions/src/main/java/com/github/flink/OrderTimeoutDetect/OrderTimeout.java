@@ -1,4 +1,4 @@
-package com.github.flink.OrderTimeoutDetect;
+package com.github.flink.ordertimeoutdetect;
 
 /**
  * @Author: zlzhang0122

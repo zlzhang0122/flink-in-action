@@ -1,4 +1,4 @@
-package com.github.flink.LoginFailDetect.model;
+package com.github.flink.loginfaildetect.model;
 
 import java.io.Serializable;
 

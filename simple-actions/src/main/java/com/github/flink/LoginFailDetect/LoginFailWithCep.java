@@ -1,6 +1,6 @@
-package com.github.flink.LoginFailDetect;
+package com.github.flink.loginfaildetect;
 
-import com.github.flink.LoginFailDetect.model.LoginEvent;
+import com.github.flink.loginfaildetect.model.LoginEvent;
 import org.apache.flink.cep.CEP;
 import org.apache.flink.cep.PatternSelectFunction;
 import org.apache.flink.cep.PatternStream;

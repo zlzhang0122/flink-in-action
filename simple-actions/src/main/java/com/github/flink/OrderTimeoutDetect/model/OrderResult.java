@@ -1,4 +1,4 @@
-package com.github.flink.OrderTimeoutDetect.model;
+package com.github.flink.ordertimeoutdetect.model;
 
 /**
  * 订单结果
