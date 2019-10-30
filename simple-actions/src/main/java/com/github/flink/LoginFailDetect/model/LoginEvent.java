@@ -19,6 +19,12 @@ public class LoginEvent implements Serializable {
         this.eventTime = eventTime;
     }
 
+    public LoginEvent(Long userId, String ip, String eventType) {
+        this.userId = userId;
+        this.ip = ip;
+        this.eventType = eventType;
+    }
+
     private Long userId;
 
     private String ip;
