@@ -178,6 +178,18 @@
             <artifactId>json-smart</artifactId>
             <version>2.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-cep_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-cep-scala_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
