@@ -6,7 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 基于协同过滤算法实现产品相关度计算
+ * 基于协同过滤的产品相关度计算
+ * * 策略1 ：协同过滤
+ *      *           abs( i ∩ j)
+ *      *      w = ——————————————
+ *      *           sqrt(i || j)
  *
  * @Author: zlzhang0122
  * @Date: 2019/10/17 8:15 PM

@@ -8,7 +8,10 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 /**
- * 基于产品
+ * 基于产品标签的产品相关度计算
+ *      * 策略2 ： 基于产品标签 计算产品的余弦相似度
+ *      *
+ *      *     w = sqrt( pow((tag{i,a} - tag{j,a}),2)  + pow((tag{i,b} - tag{j,b}),2) )
  *
  * @Author: zlzhang0122
  * @Date: 2019/10/17 8:35 PM
