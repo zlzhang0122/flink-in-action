@@ -1,5 +1,6 @@
 package com.github.flink.streamjoin;
 
+import com.github.flink.streamjoin.model.StockSnapshot;
 import com.github.flink.streamjoin.model.StockTransaction;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.TimeCharacteristic;
@@ -63,7 +64,27 @@ public class StreamJoinAction {
         listA.add("2019-08-08 13:00:04.000,000001,10.1");
         listA.add("2019-08-08 13:00:07.000,000001,10.0");
         listA.add("2019-08-08 13:00:16.000,000001,10.1");
-        DataStream<String> dataStreamB = env.fromCollection(listB);
+        DataStream<StockSnapshot> dataStreamB = env.fromCollection(listB).map(new MapFunction<String, StockSnapshot>() {
+            @Override
+            public StockSnapshot map(String value) throws Exception {
+                String[] s = value.split(",");
+
+                return new StockSnapshot(s[0], s[1], Double.parseDouble(s[2]));
+            }
+        }).assignTimestampsAndWatermarks(new AscendingTimestampExtractor<StockSnapshot>() {
+            @Override
+            public long extractAscendingTimestamp(StockSnapshot element) {
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+
+                try{
+                    Date date = simpleDateFormat.parse(element.getMdTime());
+                    return date.getTime();
+                }catch (Exception e){
+                    logger.error("parse error", e);
+                    return Integer.MAX_VALUE;
+                }
+            }
+        });
 
 
     }
