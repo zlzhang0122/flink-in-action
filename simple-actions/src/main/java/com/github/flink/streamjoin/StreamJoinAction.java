@@ -12,8 +12,6 @@ import org.apache.flink.streaming.api.functions.timestamps.AscendingTimestampExt
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
-import org.apache.flink.streaming.api.windowing.windows.Window;
-import org.apache.flink.table.runtime.operators.window.assigners.InternalTimeWindowAssigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
