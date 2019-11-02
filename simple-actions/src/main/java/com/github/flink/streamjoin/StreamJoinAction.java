@@ -3,10 +3,17 @@ package com.github.flink.streamjoin;
 import com.github.flink.streamjoin.model.StockSnapshot;
 import com.github.flink.streamjoin.model.StockTransaction;
 import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.streaming.api.TimeCharacteristic;
+import org.apache.flink.streaming.api.datastream.CoGroupedStreams;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.timestamps.AscendingTimestampExtractor;
+import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows;
+import org.apache.flink.streaming.api.windowing.time.Time;
+import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
+import org.apache.flink.streaming.api.windowing.windows.Window;
+import org.apache.flink.table.runtime.operators.window.assigners.InternalTimeWindowAssigner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -86,6 +93,16 @@ public class StreamJoinAction {
             }
         });
 
-
+        CoGroupedStreams.WithWindow<StockTransaction, StockSnapshot, String, TimeWindow> joinStream = dataStreamA.coGroup(dataStreamB).where(new KeySelector<StockTransaction, String>() {
+            @Override
+            public String getKey(StockTransaction value) throws Exception {
+                return value.getTxCode();
+            }
+        }).equalTo(new KeySelector<StockSnapshot, String>() {
+            @Override
+            public String getKey(StockSnapshot value) throws Exception {
+                return value.getMdCode();
+            }
+        }).window(TumblingEventTimeWindows.of(Time.seconds(3)));
     }
 }
