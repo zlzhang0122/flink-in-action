@@ -1,6 +1,8 @@
 package com.github.flink.streamjoin;
 
 import com.github.flink.streamjoin.functions.UserCustomInnerJoinFunction;
+import com.github.flink.streamjoin.functions.UserCustomLeftJoinFunction;
+import com.github.flink.streamjoin.functions.UserCustomRightJoinFunction;
 import com.github.flink.streamjoin.model.StockSnapshot;
 import com.github.flink.streamjoin.model.StockTransaction;
 import org.apache.flink.api.common.functions.MapFunction;
@@ -105,5 +107,9 @@ public class StreamJoinAction {
         }).window(TumblingEventTimeWindows.of(Time.seconds(3)));
 
         joinStream.apply(new UserCustomInnerJoinFunction()).print();
+        joinStream.apply(new UserCustomLeftJoinFunction()).print();
+        joinStream.apply(new UserCustomRightJoinFunction()).print();
+
+        env.execute("flink table join");
     }
 }

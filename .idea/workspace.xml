@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomLeftJoinFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomRightJoinFunction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java" />
     </list>
     <ignored path="flink-in-action.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StreamJoinAction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StreamJoinAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+            <state relative-caret-position="424">
+              <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,14 +46,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserCustomInnerJoinFunction.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserCustomInnerJoinFunction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCustomLeftJoinFunction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomLeftJoinFunction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="142" selection-start-line="25" selection-start-column="142" selection-end-line="25" selection-end-column="142" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserCustomRightJoinFunction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomRightJoinFunction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="25" column="141" selection-start-line="25" selection-start-column="141" selection-end-line="25" selection-end-column="141" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,8 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/domain/ProductEntity.java" />
-        <option value="$PROJECT_DIR$/web-actions/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/web-actions/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ContactServiceImpl.java" />
         <option value="$PROJECT_DIR$/web-actions/src/main/java/com/github/flink/service/impl/ProductServiceImpl.java" />
@@ -126,8 +148,10 @@
         <option value="$PROJECT_DIR$/recommand-actions/src/main/java/com/github/flink/UserHistoryTask.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/model/StockTransaction.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/model/StockSnapshot.java" />
-        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java" />
         <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java" />
+        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomLeftJoinFunction.java" />
+        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomRightJoinFunction.java" />
+        <option value="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java" />
       </list>
     </option>
   </component>
@@ -152,10 +176,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-109" />
-    <option name="y" value="255" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="522" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -454,6 +477,7 @@
       <recent name="com.github.flink" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.flink.streamjoin.functions" />
       <recent name="com.github.flink.actionanalysis" />
       <recent name="com.github.flink.domain" />
       <recent name="com.github.flink.hbase" />
@@ -1096,15 +1120,15 @@
       <workItem from="1571218023084" duration="46297000" />
       <workItem from="1571973317384" duration="43398000" />
       <workItem from="1572515738926" duration="266000" />
-      <workItem from="1572518317637" duration="4533000" />
+      <workItem from="1572518317637" duration="5380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115191000" />
+    <option name="totallyTimeSpent" value="116038000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-109" y="255" width="1280" height="522" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1191,20 +1215,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simple-actions/run-command.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/env.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flink/flink-core/src/main/java/org/apache/flink/api/common/functions/AbstractRichFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -1556,16 +1566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flink/flink-core/src/main/java/org/apache/flink/api/common/functions/CoGroupFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -1574,10 +1574,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomLeftJoinFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="142" selection-start-line="25" selection-start-column="142" selection-end-line="25" selection-end-column="142" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomRightJoinFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="141" selection-start-line="25" selection-start-column="141" selection-end-line="25" selection-end-column="141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/functions/UserCustomInnerJoinFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streamjoin/StreamJoinAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="107" column="8" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
