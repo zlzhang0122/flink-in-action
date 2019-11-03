@@ -68,10 +68,10 @@ public class StreamJoinAction {
         });
 
         List<String> listB = new ArrayList<>();
-        listA.add("2019-08-08 13:00:01.000,000001,10.2");
-        listA.add("2019-08-08 13:00:04.000,000001,10.1");
-        listA.add("2019-08-08 13:00:07.000,000001,10.0");
-        listA.add("2019-08-08 13:00:16.000,000001,10.1");
+        listB.add("2019-08-08 13:00:01.000,000001,10.2");
+        listB.add("2019-08-08 13:00:04.000,000001,10.1");
+        listB.add("2019-08-08 13:00:07.000,000001,10.0");
+        listB.add("2019-08-08 13:00:16.000,000001,10.1");
         DataStream<StockSnapshot> dataStreamB = env.fromCollection(listB).map(new MapFunction<String, StockSnapshot>() {
             @Override
             public StockSnapshot map(String value) throws Exception {
