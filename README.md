@@ -1,7 +1,7 @@
 # flink-in-action
 实用的flink使用的范例：
 
-### simple-actions下是一些简单的使用范例,包括:
+### 一、simple-actions下是一些简单的使用范例,包括:
 (1) actionanalysis是电商平台用户购物行为数据分析系统,它根据用户行为数据(包括用户行为习惯数据和业务行为数据),分析用户喜好.
 
 (2) batch目录下是一个简单的flink批处理应用--batch wordcount.
@@ -25,7 +25,7 @@
 (11) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
 
 
-### recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,
+### 二、recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,
 其共分为6个子任务:
 
 (1)日志任务:用户访问商品日志数据写入kafka,然后flink任务消费kafka的日志topic,不做过滤直接写入hbase中.
@@ -49,7 +49,7 @@ recommand-actions中的scheduler包下:
 
 
 
-另外，还有一些工具方法，包括simple-actions目录下：
+### 三、工具方法，包括simple-actions目录下：
 
 source-generator.sh用来生成kafka topic的消息.
 
