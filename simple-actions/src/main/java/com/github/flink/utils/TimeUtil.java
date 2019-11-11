@@ -15,6 +15,8 @@ public class TimeUtil {
 
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
+    private static SimpleDateFormat dateSecondFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+
     /**
      * 判断通过时间是否在限定时间内
      *
@@ -122,5 +124,25 @@ public class TimeUtil {
         }
 
         return week;
+    }
+
+    /**
+     * 时间格式化
+     *
+     * @param str
+     * @param format
+     * @return
+     */
+    public static Date getDateFromString(String str, String format){
+
+        Date date = null;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        try{
+            date = simpleDateFormat.parse(str);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return date;
     }
 }
