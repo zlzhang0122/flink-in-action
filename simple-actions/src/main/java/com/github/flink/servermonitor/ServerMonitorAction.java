@@ -1,7 +1,6 @@
 package com.github.flink.servermonitor;
 
 import com.github.flink.servermonitor.model.ServerMonitor;
-import com.github.flink.streamjoin.model.StockSnapshot;
 import com.github.flink.utils.TimeUtil;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
@@ -14,14 +13,10 @@ import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.AssignerWithPunctuatedWatermarks;
 import org.apache.flink.streaming.api.functions.KeyedProcessFunction;
-import org.apache.flink.streaming.api.functions.TimestampExtractor;
-import org.apache.flink.streaming.api.functions.timestamps.AscendingTimestampExtractor;
 import org.apache.flink.streaming.api.watermark.Watermark;
-import org.apache.flink.streaming.runtime.operators.TimestampsAndPunctuatedWatermarksOperator;
 import org.apache.flink.util.Collector;
 
 import javax.annotation.Nullable;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

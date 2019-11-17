@@ -20,11 +20,13 @@
 
 (9) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
 
-(10) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
+(10) servermonitor是一个服务器存活状态监控程序，如果在收到服务器下线状态超过5分钟仍没有上线状态，则会发出一条报警信息.
 
-(11) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
+(11) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
 
-(12) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
+(12) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
+
+(13) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
 
 
 ### 二、recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,其共分为6个子任务:
