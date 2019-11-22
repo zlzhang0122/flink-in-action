@@ -28,6 +28,8 @@
 
 (13) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
 
+(14) utils下是一些实用的工具类，包括mysql、orcfile、sqlparser、kafkasource、序列化器、属性文件读取、时间工具等.
+
 
 ### 二、recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,其共分为6个子任务:
 
