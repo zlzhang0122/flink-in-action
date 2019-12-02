@@ -17,6 +17,17 @@ public class Order {
 
     private String areaId;
 
+    public Order() {
+    }
+
+    public Order(String orderId, Long orderTime, String gdsId, Double amount, String areaId) {
+        this.orderId = orderId;
+        this.orderTime = orderTime;
+        this.gdsId = gdsId;
+        this.amount = amount;
+        this.areaId = areaId;
+    }
+
     public String getOrderId() {
         return orderId;
     }

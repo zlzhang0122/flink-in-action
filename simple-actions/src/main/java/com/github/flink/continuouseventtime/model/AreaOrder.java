@@ -11,6 +11,14 @@ public class AreaOrder {
 
     private Double amount;
 
+    public AreaOrder() {
+    }
+
+    public AreaOrder(String areaId, Double amount) {
+        this.areaId = areaId;
+        this.amount = amount;
+    }
+
     public String getAreaId() {
         return areaId;
     }
