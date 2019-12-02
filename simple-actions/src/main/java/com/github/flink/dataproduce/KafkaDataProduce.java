@@ -19,7 +19,7 @@ public class KafkaDataProduce {
         DataStream<String> dataStream = environment.addSource(new KafkaDataSource());
 
         String brokerList = PropertiesUtil.getStrValue("kafka.bootstrap.servers");
-        String topic = PropertiesUtil.getStrValue("kafka.log.topic.id");
+        String topic = PropertiesUtil.getStrValue("kafka.log.topic.id.demo");
 
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", brokerList);

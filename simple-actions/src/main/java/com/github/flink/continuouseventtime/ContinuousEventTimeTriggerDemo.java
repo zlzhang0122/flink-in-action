@@ -2,17 +2,19 @@ package com.github.flink.continuouseventtime;
 
 import com.github.flink.continuouseventtime.model.AreaOrder;
 import com.github.flink.continuouseventtime.model.Order;
+import com.github.flink.utils.FlinkKafkaManager;
+import com.github.flink.utils.PropertiesUtil;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.functions.ReduceFunction;
 import org.apache.flink.streaming.api.TimeCharacteristic;
-import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.triggers.ContinuousEventTimeTrigger;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Properties;
 
 /**
  * @Author: zlzhang0122
@@ -25,10 +27,18 @@ public class ContinuousEventTimeTriggerDemo {
         env.getConfig().setAutoWatermarkInterval(5000L);
         env.setParallelism(1);
 
-        List<String> sourceList = new ArrayList<>();
-        sourceList.add("orderId03,1573874530000,gdsId03,300,beijing");
-        sourceList.add("orderId03,1573874740000,gdsId03,300,hanzhou");
-        DataStream<String> dataStream = env.fromCollection(sourceList);
+        Properties properties = PropertiesUtil.getKafkaProperties("continuous-trigger");
+        FlinkKafkaManager manager = new FlinkKafkaManager("continuous-trigger", properties);
+        FlinkKafkaConsumer<String> consumer = manager.buildStringConsumer();
+        //从最近的消息开始处理
+        consumer.setStartFromLatest();
+
+        DataStreamSource<String> dataStream = env.addSource(consumer);
+
+//        List<String> sourceList = new ArrayList<>();
+//        sourceList.add("orderId03,1573874530000,gdsId03,300,beijing");
+//        sourceList.add("orderId03,1573874740000,gdsId03,300,hanzhou");
+//        DataStream<String> dataStream = env.fromCollection(sourceList);
 
         dataStream.map(new MapFunction<String, Order>() {
             @Override

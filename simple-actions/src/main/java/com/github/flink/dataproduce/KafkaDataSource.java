@@ -27,9 +27,9 @@ public class KafkaDataSource implements SourceFunction<String> {
 //        books.add("1,112,1563799420,1");
 //        books.add("1,112,1563799428,1");
 
-        while (isRunning){
+//        while (isRunning){
 
-            StringBuffer stringBuffer = new StringBuffer();
+            /*StringBuffer stringBuffer = new StringBuffer();
             List<String> userIds = new ArrayList<>();
             userIds.add("1");
             userIds.add("2");
@@ -67,12 +67,17 @@ public class KafkaDataSource implements SourceFunction<String> {
 
             stringBuffer.append(actionId);
             String s = stringBuffer.toString();
-            System.out.println(s);
+            System.out.println(s);*/
+            String s1 = "orderId03,1573874530000,gdsId03,300,beijing";
 
-            sourceContext.collect(s);
+            sourceContext.collect(s1);
 
             Thread.sleep(1000);
-        }
+
+            String s2 = "orderId03,1573874740000,gdsId03,300,hanzhou";
+
+            sourceContext.collect(s2);
+//        }
     }
 
     @Override

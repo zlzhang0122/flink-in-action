@@ -8,7 +8,9 @@
 
 (3) batch目录下是一个简单的flink批处理应用--batch wordcount.
 
-(4) dataproduct目录下是一个模拟生成kafka消息的工具.
+(4) continuouseventtime目录下是一个定时触发器的简单实现.
+
+(4) dataproduce目录下是一个模拟生成kafka消息的工具.
 
 (5) licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
 
