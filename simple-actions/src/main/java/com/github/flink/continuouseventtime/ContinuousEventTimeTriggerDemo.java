@@ -17,6 +17,8 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 import java.util.Properties;
 
 /**
+ * 定时触发器
+ *
  * @Author: zlzhang0122
  * @Date: 2019/11/22 1:30 PM
  */
