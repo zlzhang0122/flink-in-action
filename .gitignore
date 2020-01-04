@@ -7,3 +7,11 @@ simple-actions/target/generated-test-sources/
 simple-actions/target/original-flink-in-action.jar
 simple-actions/target/simple-actions-1.0-SNAPSHOT-jar-with-dependencies.jar
 simple-actions/target/simple-actions-1.0-SNAPSHOT.jar
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
