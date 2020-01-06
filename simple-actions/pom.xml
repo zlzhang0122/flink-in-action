@@ -18,7 +18,7 @@
         <mysql.driver.version>6.0.6</mysql.driver.version>
         <junit.version>4.12</junit.version>
         <redis.version>5.0.5.RELEASE</redis.version>
-        <netty.version>4.1.43.Final</netty.version>
+        <netty.version>4.1.44.Final</netty.version>
     </properties>
 
     <dependencies>
