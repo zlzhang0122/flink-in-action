@@ -13,11 +13,11 @@ import org.apache.flink.table.sinks.TableSink;
  * @Author: zlzhang0122
  * @Date: 2020/1/6 10:17 PM
  */
-public class MyRetractStreamTableSink<Row> implements RetractStreamTableSink{
+public class MyRetractStreamTableSink implements RetractStreamTableSink{
 
     private String[] fieldNames;
 
-    private TypeInformation<Row>[] fieldTypes;
+    private TypeInformation[] fieldTypes;
 
     @Override
     public TypeInformation getRecordType() {
@@ -30,12 +30,15 @@ public class MyRetractStreamTableSink<Row> implements RetractStreamTableSink{
     }
 
     @Override
-    public TableSink configure(String[] strings, TypeInformation[] typeInformations) {
-        return null;
+    public TableSink configure(String[] fieldNames, TypeInformation[] fieldTypes) {
+        this.fieldNames = fieldNames;
+        this.fieldTypes = fieldTypes;
+
+        return this;
     }
 
     @Override
     public TypeInformation<?>[] getFieldTypes() {
-        return new TypeInformation<?>[0];
+        return fieldTypes;
     }
 }
