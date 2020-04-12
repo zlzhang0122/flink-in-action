@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * 不走寻常路的开发(直连kafka，不走flink kafka connector)
+ *
  * @Author: zlzhang0122
  * @Date: 2019/9/4 15:56
  */
@@ -38,6 +40,9 @@ public class StreamingAction {
                     logger.info(value.f0 + ":" + value.f1);
                     return new Tuple2<String, Integer>(value.f0, value.f1 * 2);
                 }});
+
+
+        DataStream<String> dataStreamRes = dataStreamForNew.map(new KafkaTest());
 
         dataStreamForNew.print();
 

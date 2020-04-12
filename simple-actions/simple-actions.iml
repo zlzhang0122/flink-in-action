@@ -33,7 +33,6 @@
     <orderEntry type="library" name="Maven: org.apache.flink:flink-shaded-netty:4.1.32.Final-7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-shaded-jackson:2.9.8-7.0" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.19.0-GA" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.11:2.5.21" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe:config:1.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0" level="project" />
@@ -50,8 +49,8 @@
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.3.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.flink:flink-connector-kafka-0.11_2.11:1.9.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.flink:flink-connector-kafka-0.10_2.11:1.9.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.kafka:kafka-clients:0.11.0.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: net.jpountz.lz4:lz4:1.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka-clients:0.11.0.2" level="project" />
+    <orderEntry type="library" name="Maven: net.jpountz.lz4:lz4:1.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-streaming-java_2.11:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-shaded-guava:18.0-7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-java:1.9.0" level="project" />
@@ -59,7 +58,6 @@
     <orderEntry type="library" name="Maven: org.apache.flink:flink-orc_2.11:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-planner-blink_2.11:1.9.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-table-api-scala_2.11:1.9.0" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.5" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
@@ -123,7 +121,6 @@
     <orderEntry type="library" name="Maven: org.apache.curator:curator-client:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.curator:curator-recipes:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.htrace:htrace-core:3.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hive:hive-storage-api:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.orc:orc-mapreduce:1.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware:kryo-shaded:3.0.3" level="project" />
@@ -166,5 +163,16 @@
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.24.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.24.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.43.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.kafka:kafka_2.11:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.jopt-simple:jopt-simple:5.0.4" level="project" />
+    <orderEntry type="library" name="Maven: com.yammer.metrics:metrics-core:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.12" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.11.12" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.scala-logging:scala-logging_2.11:3.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.101tec:zkclient:0.10" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.zookeeper:zookeeper:3.4.10" level="project" />
   </component>
 </module>
