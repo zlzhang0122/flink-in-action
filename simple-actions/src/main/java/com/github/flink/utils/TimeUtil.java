@@ -145,4 +145,15 @@ public class TimeUtil {
 
         return date;
     }
+
+    /**
+     * 获取格式化的当天时间
+     *
+     * @return
+     */
+    public static String getTodayDayStr(String formatStr){
+        Date today = new Date();
+
+        return new SimpleDateFormat(formatStr).format(today);
+    }
 }
