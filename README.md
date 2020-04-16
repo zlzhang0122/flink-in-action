@@ -2,38 +2,38 @@
 实用的flink使用的范例：
 
 ### 一、simple-actions下是一些简单的使用范例,包括:
-(1) actionanalysis是电商平台用户购物行为数据分析系统,它根据用户行为数据(包括用户行为习惯数据和业务行为数据),分析用户喜好.
+  * actionanalysis是电商平台用户购物行为数据分析系统,它根据用户行为数据(包括用户行为习惯数据和业务行为数据),分析用户喜好.
 
-(2) appendstreamsql目录下是一个简单的flink流处理Sql程序.
+  * appendstreamsql目录下是一个简单的flink流处理Sql程序.
 
-(3) asyncinvoke目录下是一个异步处理算子的应用，FLink异步I/O非常实用，如果使用得当会大幅度提升性能(当然，增加并发度能达到类似的效果，
+  * asyncinvoke目录下是一个异步处理算子的应用，FLink异步I/O非常实用，如果使用得当会大幅度提升性能(当然，增加并发度能达到类似的效果，
 但使用的机器资源将会非常大).
 
-(3) batch目录下是一个简单的flink批处理应用--batch wordcount.
+  * batch目录下是一个简单的flink批处理应用--batch wordcount.
 
-(4) continuouseventtime目录下是一个定时触发器的简单实现.
+  * continuouseventtime目录下是一个定时触发器的简单实现.
 
-(5) dataproduce目录下是一个模拟生成kafka消息的工具.
+  * dataproduce目录下是一个模拟生成kafka消息的工具.
 
-(6) licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
+  * licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
 
-(7) loginfaildetect是一个根据登录行为异常检测程序，分为不用CEP实现的版本和使用CEP实现的版本.
+  * loginfaildetect是一个根据登录行为异常检测程序，分为不用CEP实现的版本和使用CEP实现的版本.
 
-(8) networkanalysis是一个网站流量检测程序，从日志从获取数据，并每5秒统计一次最近10分钟访问量最高的10个url.
+  * networkanalysis是一个网站流量检测程序，从日志从获取数据，并每5秒统计一次最近10分钟访问量最高的10个url.
 
-(9) ordertimeoutdetect是一个下单超时检测程序，如果用户下单后超过15分钟仍不付款，则将其列为超时订单.
+  * ordertimeoutdetect是一个下单超时检测程序，如果用户下单后超过15分钟仍不付款，则将其列为超时订单.
 
-(10) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
+  * rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
 
-(11) servermonitor是一个服务器存活状态监控程序，如果在收到服务器下线状态超过5分钟仍没有上线状态，则会发出一条报警信息.
+  * servermonitor是一个服务器存活状态监控程序，如果在收到服务器下线状态超过5分钟仍没有上线状态，则会发出一条报警信息.
 
-(12) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
+  * streaming目录下是一个简单的flink流式计算应用--straming wordcount.
 
-(13) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
+  * streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
 
-(14) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
+  * streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
 
-(15) utils下是一些实用的工具类，包括mysql、orcfile、sqlparser、kafkasource、序列化器、属性文件读取、时间工具等.
+  * utils下是一些实用的工具类，包括mysql、orcfile、sqlparser、kafkasource、序列化器、属性文件读取、时间工具等.
 
 
 ### 二、recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,其共分为6个子任务:
