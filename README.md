@@ -13,27 +13,27 @@
 
 (4) continuouseventtime目录下是一个定时触发器的简单实现.
 
-(4) dataproduce目录下是一个模拟生成kafka消息的工具.
+(5) dataproduce目录下是一个模拟生成kafka消息的工具.
 
-(5) licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
+(6) licenseNumber是一个车牌号限制汇总系统,它通过消费kafka中采集到的车辆监控信息,与限号规则进行比较,来判定车辆是否违规.
 
-(6) loginfaildetect是一个根据登录行为异常检测程序，分为不用CEP实现的版本和使用CEP实现的版本.
+(7) loginfaildetect是一个根据登录行为异常检测程序，分为不用CEP实现的版本和使用CEP实现的版本.
 
-(7) networkanalysis是一个网站流量检测程序，从日志从获取数据，并每5秒统计一次最近10分钟访问量最高的10个url.
+(8) networkanalysis是一个网站流量检测程序，从日志从获取数据，并每5秒统计一次最近10分钟访问量最高的10个url.
 
-(8) ordertimeoutdetect是一个下单超时检测程序，如果用户下单后超过15分钟仍不付款，则将其列为超时订单.
+(9) ordertimeoutdetect是一个下单超时检测程序，如果用户下单后超过15分钟仍不付款，则将其列为超时订单.
 
-(9) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
+(10) rdbms目录下是一个消费kafka消息并将结果写入mysql的flink流式计算应用.
 
-(10) servermonitor是一个服务器存活状态监控程序，如果在收到服务器下线状态超过5分钟仍没有上线状态，则会发出一条报警信息.
+(11) servermonitor是一个服务器存活状态监控程序，如果在收到服务器下线状态超过5分钟仍没有上线状态，则会发出一条报警信息.
 
-(11) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
+(12) streaming目录下是一个简单的flink流式计算应用--straming wordcount.
 
-(12) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
+(13) streamingsql目录下是一个flink streaming sql应用，基于flink 1.9.0版本，可以实时从kafka接收数据并经过简单的sql etl，将结果写入mysql表中.
 
-(13) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
+(14) streamjoin是一个实现双流join的程序，实现了滚动窗口3秒内数据的内连接，左连接和右连接.
 
-(14) utils下是一些实用的工具类，包括mysql、orcfile、sqlparser、kafkasource、序列化器、属性文件读取、时间工具等.
+(15) utils下是一些实用的工具类，包括mysql、orcfile、sqlparser、kafkasource、序列化器、属性文件读取、时间工具等.
 
 
 ### 二、recommand-actions结合web-actions是一个基于Flink实现的商品实时推荐系统，它基于实时日志对用户进行画像，并根据画像结果将热门商品排序并推荐给用户,其共分为6个子任务:
