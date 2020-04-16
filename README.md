@@ -6,6 +6,9 @@
 
 (2) appendstreamsql目录下是一个简单的flink流处理Sql程序.
 
+(3) asyncinvoke目录下是一个异步处理算子的应用，FLink异步I/O非常实用，如果使用得当会大幅度提升性能(当然，增加并发度能达到类似的效果，
+但使用的机器资源将会非常大).
+
 (3) batch目录下是一个简单的flink批处理应用--batch wordcount.
 
 (4) continuouseventtime目录下是一个定时触发器的简单实现.
