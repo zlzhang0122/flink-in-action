@@ -10,6 +10,8 @@ import org.apache.flink.util.Collector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Random;
+
 /**
  * 不走寻常路的开发(直连kafka，不走flink kafka connector)
  *
@@ -34,11 +36,14 @@ public class StreamingAction {
                     }
                 }).keyBy(0).timeWindow(Time.seconds(5)).sum(1);
 
-        DataStream<Tuple2<String, Integer>> dataStreamForNew = dataStream.map(new MapFunction<Tuple2<String, Integer>, Tuple2<String, Integer>>(){
-                public Tuple2<String, Integer> map(Tuple2<String, Integer> value) throws Exception {
+        DataStream<Tuple2<String, Integer>> dataStreamForNew = dataStream.flatMap(new FlatMapFunction<Tuple2<String, Integer>, Tuple2<String, Integer>>(){
+                public void flatMap(Tuple2<String, Integer> value, Collector<Tuple2<String, Integer>> collector) throws Exception {
                     System.out.println(value.f0 + ":" + value.f1);
                     logger.info(value.f0 + ":" + value.f1);
-                    return new Tuple2<String, Integer>(value.f0, value.f1 * 2);
+                    for(int i = 0; i < 100000; i++){
+                        Random random = new Random(System.currentTimeMillis());
+                        collector.collect(new Tuple2<String, Integer>(value.f0 + random.nextInt(1000000), value.f1 * 2));
+                    }
                 }});
 
 
