@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/realtimeuv/RealtimeUV.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/utils/ProtobufSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streaming/FiniteTestStreamingAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flink-in-action.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flink-in-action.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recommand-actions/recommand-actions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recommand-actions/recommand-actions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-actions/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-actions/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-actions/simple-actions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-actions/simple-actions.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +35,6 @@
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="709" />
   </component>
   <component name="ProjectId" id="1haLMNQI5i5Ol2Gkk2CThqazOTr" />
   <component name="ProjectViewState">
@@ -74,7 +73,7 @@
       <recent name="$PROJECT_DIR$/simple-actions/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StreamingAction">
+  <component name="RunManager" selected="Application.FiniteTestStreamingAction">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -183,6 +182,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FiniteTestStreamingAction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.flink.streaming.FiniteTestStreamingAction" />
+      <module name="simple-actions" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.flink.streaming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KafkaDataProduce" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.flink.dataproduce.KafkaDataProduce" />
       <module name="simple-actions" />
@@ -204,20 +217,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.github.flink.retractstream.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServerMonitorAction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.flink.servermonitor.ServerMonitorAction" />
-      <module name="simple-actions" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.flink.servermonitor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -365,20 +364,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.ServerMonitorAction" />
       <item itemvalue="Application.ContinuousEventTimeTriggerDemo" />
       <item itemvalue="Application.KafkaDataProduce" />
       <item itemvalue="Application.RetractWordCount" />
       <item itemvalue="Application.StreamingAction" />
       <item itemvalue="Spring Boot.WebActionsApplication" />
+      <item itemvalue="Application.FiniteTestStreamingAction" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FiniteTestStreamingAction" />
         <item itemvalue="Application.StreamingAction" />
         <item itemvalue="Application.RetractWordCount" />
         <item itemvalue="Application.KafkaDataProduce" />
         <item itemvalue="Application.ContinuousEventTimeTriggerDemo" />
-        <item itemvalue="Application.ServerMonitorAction" />
       </list>
     </recent_temporary>
   </component>
@@ -418,6 +417,12 @@
       <workItem from="1587112878992" duration="2320000" />
       <workItem from="1587365193430" duration="164000" />
       <workItem from="1600244210787" duration="1051000" />
+      <workItem from="1600258089293" duration="297000" />
+      <workItem from="1601014379265" duration="320000" />
+      <workItem from="1601262335560" duration="691000" />
+      <workItem from="1601281762566" duration="470000" />
+      <workItem from="1601345823888" duration="619000" />
+      <workItem from="1601437406326" duration="757000" />
     </task>
     <servers />
   </component>
@@ -433,10 +438,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="28" width="670" height="676" key="search.everywhere.popup" timestamp="1600246231885">
+    <state width="1238" height="244" key="GridCell.Tab.0.bottom" timestamp="1601438081371">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="305" y="28" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1600246231885" />
+    <state width="1238" height="244" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1601438081371" />
+    <state width="1238" height="244" key="GridCell.Tab.0.center" timestamp="1601438081370">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="244" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1601438081370" />
+    <state width="1238" height="244" key="GridCell.Tab.0.left" timestamp="1601438081369">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="244" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1601438081369" />
+    <state width="1238" height="244" key="GridCell.Tab.0.right" timestamp="1601438081370">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state width="1238" height="244" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1601438081370" />
+    <state x="305" y="28" width="670" height="676" key="search.everywhere.popup" timestamp="1601437468107">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="305" y="28" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1601437468107" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
