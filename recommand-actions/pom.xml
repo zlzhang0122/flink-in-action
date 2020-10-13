@@ -18,7 +18,7 @@
         <hadoop.version>2.6.4</hadoop.version>
         <redis.version>3.0.1</redis.version>
         <redis.connector.version>1.1.5</redis.connector.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <fast.json>1.2.60</fast.json>
     </properties>
 
