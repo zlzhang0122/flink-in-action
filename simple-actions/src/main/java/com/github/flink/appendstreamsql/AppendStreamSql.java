@@ -1,14 +1,14 @@
 package com.github.flink.appendstreamsql;
 
 import com.github.flink.appendstreamsql.model.Person;
+import com.sun.rowset.internal.BaseRow;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.table.api.EnvironmentSettings;
 import org.apache.flink.table.api.Table;
-import org.apache.flink.table.api.java.StreamTableEnvironment;
-import org.apache.flink.table.dataformat.BaseRow;
+import org.apache.flink.table.api.bridge.java.StreamTableEnvironment;
 
 import java.io.BufferedReader;
 import java.io.IOException;

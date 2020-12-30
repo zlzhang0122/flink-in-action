@@ -14,8 +14,8 @@ import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011;
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer011;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,7 +50,7 @@ public class AsyncInvokeAction {
         String topicId = PropertiesUtil.getStrValue("kafka.log.topic.id");
         checkNotNull(topicId, "topicId is not null");
 
-        FlinkKafkaConsumer011<String> consumer = new FlinkKafkaConsumer011<String>(topicId, new SimpleStringSchema(), pushToolProperties);
+        FlinkKafkaConsumer<String> consumer = new FlinkKafkaConsumer<String>(topicId, new SimpleStringSchema(), pushToolProperties);
         consumer.setStartFromGroupOffsets();
         DataStream<String> inStream = env.addSource(consumer).setParallelism(1);
 
@@ -127,7 +127,7 @@ public class AsyncInvokeAction {
 
         //结果发往Kafka
         String sendTopicId = PropertiesUtil.getStrValue("kafka.log.topic.id.demo");
-        resStream.addSink(new FlinkKafkaProducer011<>(sendTopicId, new SimpleStringSchema(), pushToolProperties)).setParallelism(1).name("invoke-end");
+        resStream.addSink(new FlinkKafkaProducer<>(sendTopicId, new SimpleStringSchema(), pushToolProperties)).setParallelism(1).name("invoke-end");
 
         //触发执行
         env.execute();

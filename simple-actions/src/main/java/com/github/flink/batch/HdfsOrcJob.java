@@ -4,7 +4,7 @@ import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.orc.OrcTableSource;
 import org.apache.flink.table.api.Table;
-import org.apache.flink.table.api.java.BatchTableEnvironment;
+import org.apache.flink.table.api.bridge.java.BatchTableEnvironment;
 import org.apache.flink.types.Row;
 import org.apache.orc.TypeDescription;
 
@@ -21,12 +21,12 @@ public class HdfsOrcJob {
         TypeDescription schema = TypeDescription.fromString("struct<id:int,name:int,count:int>");
         OrcTableSource orcTs = OrcTableSource.builder().path("hdfs://localhost:9000/user/zhangjiao/orc/test.orc")
                 .forOrcSchema(schema).build();
-        tableEnvironment.registerTableSource("OrcTable", orcTs);
-        Table result = tableEnvironment.sqlQuery("select * from OrcTable");
+//        tableEnvironment.registerTable("OrcTable", orcTs);
+//        Table result = tableEnvironment.sqlQuery("select * from OrcTable");
 
-        DataSet<Row> rowDataSet = tableEnvironment.toDataSet(result, Row.class);
+//        DataSet<Row> rowDataSet = tableEnvironment.toDataSet(result, Row.class);
 
-        rowDataSet.print();
+//        rowDataSet.print();
 //        tableEnvironment.execute("aa");
     }
 }

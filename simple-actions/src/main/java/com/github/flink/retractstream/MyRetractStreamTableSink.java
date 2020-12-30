@@ -4,6 +4,7 @@ import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.typeutils.RowTypeInfo;
 import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.DataStreamSink;
 import org.apache.flink.table.sinks.RetractStreamTableSink;
 import org.apache.flink.table.sinks.TableSink;
 
@@ -25,11 +26,6 @@ public class MyRetractStreamTableSink implements RetractStreamTableSink{
     }
 
     @Override
-    public void emitDataStream(DataStream dataStream) {
-        dataStream.print();
-    }
-
-    @Override
     public TableSink configure(String[] fieldNames, TypeInformation[] fieldTypes) {
         this.fieldNames = fieldNames;
         this.fieldTypes = fieldTypes;
@@ -40,5 +36,10 @@ public class MyRetractStreamTableSink implements RetractStreamTableSink{
     @Override
     public TypeInformation<?>[] getFieldTypes() {
         return fieldTypes;
+    }
+
+    @Override
+    public DataStreamSink<?> consumeDataStream(DataStream dataStream) {
+        return null;
     }
 }
