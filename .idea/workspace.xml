@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a6301e-3f63-4676-8668-2671705379a8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-actions/simple-actions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/simple-actions/simple-actions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streaming/StreamingAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streaming/StreamingAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-actions/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/simple-actions/target/classes/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simple-actions/src/main/java/com/github/flink/streaming/InfiniteStream.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,7 +424,7 @@
       <workItem from="1606813803783" duration="1287000" />
       <workItem from="1609317713601" duration="2586000" />
       <workItem from="1610519231812" duration="169000" />
-      <workItem from="1610935035191" duration="2703000" />
+      <workItem from="1610935035191" duration="3415000" />
     </task>
     <servers />
   </component>
@@ -447,10 +444,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="453" y="68" key="#com.intellij.ide.util.MemberChooser/0.23.1280.709@0.23.1280.709" timestamp="1609319344983" />
-    <state x="128" y="83" key="DiffContextDialog" timestamp="1609319068558">
+    <state x="128" y="83" key="DiffContextDialog" timestamp="1610958429204">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="128" y="83" key="DiffContextDialog/0.23.1280.709@0.23.1280.709" timestamp="1609319068558" />
+    <state x="128" y="83" key="DiffContextDialog/0.23.1280.709@0.23.1280.709" timestamp="1610958429204" />
     <state width="1238" height="244" key="GridCell.Tab.0.bottom" timestamp="1610954944438">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -467,10 +464,10 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1238" height="244" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1610954944437" />
-    <state x="351" y="87" key="RollbackChangesDialog" timestamp="1609319070157">
+    <state x="351" y="87" key="RollbackChangesDialog" timestamp="1610958431180">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="351" y="87" key="RollbackChangesDialog/0.23.1280.709@0.23.1280.709" timestamp="1609319070157" />
+    <state x="351" y="87" key="RollbackChangesDialog/0.23.1280.709@0.23.1280.709" timestamp="1610958431180" />
     <state x="341" y="132" width="598" height="490" key="find.popup" timestamp="1603937197259">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
