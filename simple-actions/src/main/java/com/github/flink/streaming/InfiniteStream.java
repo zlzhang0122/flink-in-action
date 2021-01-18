@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 /**
+ * 生成无限流Demo(用于测试)
+ *
  * @Author: zlzhang0122
  * @Date: 2021/1/18 4:42 下午
  */
