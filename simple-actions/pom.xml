@@ -19,6 +19,7 @@
         <junit.version>4.12</junit.version>
         <redis.version>5.0.5.RELEASE</redis.version>
         <netty.version>4.1.43.Final</netty.version>
+        <iceberg.version>0.10.0</iceberg.version>
     </properties>
 
     <dependencies>
@@ -201,6 +202,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-statebackend-rocksdb_${scala.binary.version}</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>io.lettuce</groupId>
             <artifactId>lettuce-core</artifactId>
             <version>${redis.version}</version>
@@ -228,6 +235,19 @@
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-clients_2.12</artifactId>
             <version>${flink.version}</version>
+        </dependency>
+
+<!--        datalake iceberg-->
+        <dependency>
+            <groupId>org.apache.iceberg</groupId>
+            <artifactId>iceberg-core</artifactId>
+            <version>${iceberg.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.iceberg</groupId>
+            <artifactId>iceberg-flink-runtime</artifactId>
+            <version>${iceberg.version}</version>
         </dependency>
     </dependencies>
 
