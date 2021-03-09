@@ -48,7 +48,7 @@
                     <artifactId>flink-connector-kafka-0.9_2.11</artifactId>
                 </exclusion>
             </exclusions>
-            <scope>provided</scope>
+<!--            <scope>provided</scope>-->
         </dependency>
 
         <dependency>
