@@ -42,3 +42,5 @@ hs_err_pid*
 
 simple-actions/target/surefire/
 web-actions/src/main/resources/static/
+
+simple-actions/simple-actions.iml
