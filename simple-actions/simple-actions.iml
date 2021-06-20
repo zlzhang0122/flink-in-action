@@ -205,7 +205,7 @@
     <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.iceberg:iceberg-flink-runtime:0.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-connector-mysql-cdc:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-connector-mysql-cdc:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-connector-kafka_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-format-changelog-json:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.bahir:flink-connector-redis_2.11:1.0" level="project" />
