@@ -83,8 +83,6 @@
     <orderEntry type="library" name="Maven: org.apache.flink:flink-test-utils_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-test-utils-junit:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.12.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.12.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-runtime_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.11:2.5.21" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0" level="project" />
@@ -205,11 +203,14 @@
     <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.iceberg:iceberg-flink-runtime:0.10.0" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-connector-mysql-cdc:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-connector-mysql-cdc:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.flink:flink-connector-kafka_2.11:1.12.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.ververica:flink-format-changelog-json:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.bahir:flink-connector-redis_2.11:1.0" level="project" />
     <orderEntry type="library" name="Maven: redis.clients:jedis:2.8.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.13.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-iostreams:2.13.3" level="project" />
   </component>
 </module>

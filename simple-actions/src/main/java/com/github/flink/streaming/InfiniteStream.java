@@ -24,6 +24,8 @@ public class InfiniteStream {
     private static final Logger logger = LoggerFactory.getLogger(InfiniteStream.class);
 
     public static void main(String[] args) throws Exception{
+        PrintHelper.helper();
+
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setStreamTimeCharacteristic(TimeCharacteristic.ProcessingTime);
 
@@ -36,10 +38,12 @@ public class InfiniteStream {
                 .keyBy("0").timeWindow(Time.seconds(5)).sum(1);;
 
         DataStream<Tuple2<Integer, Integer>> dataStreamForNew = infiniteStreams.map((v) -> {
-            logger.info("key:" + v.f0 + ", value:" + v.f1);
+            logger.info("key0:" + v.f0 + ", value0:" + v.f1);
+            System.out.println("key1:" + v.f0 + ", value1:" + v.f1);
+            System.err.println("key2:" + v.f0 + ", value2:" + v.f1);
             return v;
         }).returns(Types.TUPLE(Types.INT, Types.INT));
-        dataStreamForNew.print();
+//        dataStreamForNew.print();
 
         env.execute("Main stream");
     }
