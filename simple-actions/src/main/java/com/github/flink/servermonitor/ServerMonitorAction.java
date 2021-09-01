@@ -4,6 +4,8 @@ import com.github.flink.servermonitor.model.ServerMonitor;
 import com.github.flink.utils.TimeUtil;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
+import org.apache.flink.api.common.state.MapState;
+import org.apache.flink.api.common.state.MapStateDescriptor;
 import org.apache.flink.api.common.state.ValueState;
 import org.apache.flink.api.common.state.ValueStateDescriptor;
 import org.apache.flink.api.java.tuple.Tuple;
@@ -80,6 +82,7 @@ public class ServerMonitorAction {
         }).keyBy("serverId").process(new KeyedProcessFunction<Tuple, ServerMonitor, String>() {
             ValueState<String> serverState;
             ValueState<Long> timeState;
+            MapState<String, String> mapState;
 
             @Override
             public void open(Configuration parameters) throws Exception {
@@ -87,6 +90,8 @@ public class ServerMonitorAction {
                 serverState = getRuntimeContext().getState(serverDesc);
                 ValueStateDescriptor<Long> timeDesc = new ValueStateDescriptor("time-state", Long.class);
                 timeState = getRuntimeContext().getState(timeDesc);
+                MapStateDescriptor<String, String> mapTest = new MapStateDescriptor("map-state", String.class,String.class);
+                mapState = getRuntimeContext().getMapState(mapTest);
             }
 
             @Override
@@ -104,6 +109,8 @@ public class ServerMonitorAction {
                     ctx.timerService().deleteEventTimeTimer(timeState.value());
                     timeState.update(-1L);
                 }
+
+                mapState.put(value.getDate().toString(), "test");
             }
 
             @Override

@@ -7,8 +7,12 @@ import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
+import org.apache.flink.streaming.api.functions.ProcessFunction;
 import org.apache.flink.streaming.api.windowing.time.Time;
+import org.apache.flink.util.Collector;
+import org.apache.flink.util.OutputTag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +42,33 @@ public class InfiniteStream {
                 .keyBy("0").timeWindow(Time.seconds(5)).sum(1);;
 
         DataStream<Tuple2<Integer, Integer>> dataStreamForNew = infiniteStreams.map((v) -> {
-            logger.info("key0:" + v.f0 + ", value0:" + v.f1);
-            System.out.println("key1:" + v.f0 + ", value1:" + v.f1);
-            System.err.println("key2:" + v.f0 + ", value2:" + v.f1);
+//            System.err.println("key0:" + v.f0 + ", value0:" + v.f1);
             return v;
         }).returns(Types.TUPLE(Types.INT, Types.INT));
 //        dataStreamForNew.print();
+
+        OutputTag<Tuple2<Integer, Integer>> needSendTag = new OutputTag<Tuple2<Integer, Integer>>("need_send") {};
+        SingleOutputStreamOperator<Tuple2<Integer, Integer>> res = dataStreamForNew.process(new ProcessFunction<Tuple2<Integer, Integer>, Tuple2<Integer, Integer>>() {
+            @Override
+            public void processElement(Tuple2<Integer, Integer> integerIntegerTuple2, Context context, Collector<Tuple2<Integer, Integer>> collector) throws Exception {
+                if (integerIntegerTuple2.f1 % 2 == 0){
+                    collector.collect(integerIntegerTuple2);
+                }else {
+                    context.output(needSendTag, integerIntegerTuple2);
+                }
+            }
+        });
+
+        res.map((v) -> {
+            System.err.println("key1:" + v.f0 + ", value1:" + v.f1);
+            return v;
+        }).returns(Types.TUPLE(Types.INT, Types.INT));;
+
+        DataStream<Tuple2<Integer, Integer>> needSendDataStream = res.getSideOutput(needSendTag);
+        needSendDataStream.map((v) -> {
+            System.err.println("key2:" + v.f0 + ", value2:" + v.f1);
+            return v;
+        }).returns(Types.TUPLE(Types.INT, Types.INT));;
 
         env.execute("Main stream");
     }
