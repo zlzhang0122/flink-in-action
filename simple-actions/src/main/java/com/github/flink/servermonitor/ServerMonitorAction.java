@@ -56,15 +56,12 @@ public class ServerMonitorAction {
                     return null;
                 }
             }
-        }).filter(new FilterFunction<ServerMonitor>() {
-            @Override
-            public boolean filter(ServerMonitor value) throws Exception {
-                if(value == null){
-                    return false;
-                }
-
-                return true;
+        }).filter((FilterFunction<ServerMonitor>) value -> {
+            if(value == null){
+                return false;
             }
+
+            return true;
         }).assignTimestampsAndWatermarks(new AssignerWithPunctuatedWatermarks<ServerMonitor>() {
             private Long currentMaxTimestamp = 0L;
 
