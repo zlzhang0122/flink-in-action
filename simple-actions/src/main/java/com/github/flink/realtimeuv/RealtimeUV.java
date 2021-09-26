@@ -1,6 +1,6 @@
 package com.github.flink.realtimeuv;
 
-import akka.remote.serialization.ProtobufSerializer;
+//import akka.remote.serialization.ProtobufSerializer;
 import com.github.flink.utils.PropertiesUtil;
 import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment;
 
