@@ -35,6 +35,7 @@ public class FakeSourceMain {
         config.setMinPauseBetweenCheckpoints(10 * 1000);
         config.setCheckpointTimeout(60* 1000);
         config.setMaxConcurrentCheckpoints(1);
+//        config.setPreferCheckpointForRecovery(true);
 
         // 如果可以接受作业失败重启时发生数据重复的话，可以设置为AT_LEAST_ONCE，这样会加快Checkpoint速度。
         config.setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
