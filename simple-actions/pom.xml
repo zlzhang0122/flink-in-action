@@ -18,7 +18,7 @@
 <!--        <flink.version.low>1.15-SNAPSHOT</flink.version.low>-->
         <scala.binary.version>2.11</scala.binary.version>
         <fast.json>1.2.60</fast.json>
-        <mysql.driver.version>6.0.6</mysql.driver.version>
+        <mysql.driver.version>8.0.16</mysql.driver.version>
         <junit.version>4.12</junit.version>
         <redis.version>5.0.5.RELEASE</redis.version>
         <netty.version>4.1.43.Final</netty.version>
